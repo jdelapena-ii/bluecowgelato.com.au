@@ -1,9 +1,31 @@
 {
-  "name": "gatsby-starter-tailwindcss",
+  "name": "bluecowgelato-com-au",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby and Tailwind",
+  "description": "Website for Blue Cow Gelato",
   "version": "0.1.0",
-  "author": "Luke Bennett <hello@lukebennett.com.au>",
+  "author": "Luke Bennett <l.bennett@phirannodesigns.com.au>",
+  "contributors": [
+    {
+      "name": "Luke Bennett",
+      "email": "l.bennett@phirannodesigns.com.au"
+    },
+    {
+      "name": "Andrew Phelps",
+      "email": "a.phelps@phirannodesigns.com.au"
+    },
+    {
+      "name": "Johnder Manabat",
+      "email": "j.manabat@phirannodesigns.com.au"
+    },
+    {
+      "name": "Jedo de la Pena",
+      "email": "j.delapena@phirannodesigns.com.au"
+    },
+    {
+      "name": "Brennon Borbon",
+      "email": "b.borbon@phirannodesigns.com.au"
+    }
+  ],
   "license": "MIT",
   "dependencies": {
     "@reach/dialog": "^0.11.2",
@@ -32,7 +54,7 @@
     "react-hook-form": "^6.7.2",
     "react-spring": "^8.0.27",
     "tailwindcss": "^1.8.3",
-    "typeface-inter": "^3.15.0"
+    "typeface-montserrat": "^0.0.75"
   },
   "scripts": {
     "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
