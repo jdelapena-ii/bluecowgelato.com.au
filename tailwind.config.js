@@ -13,7 +13,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        display: ['True North', ...defaultTheme.fontFamily.sans],
+        dots: ['True North Dots', ...defaultTheme.fontFamily.sans],
+        sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
       },
     },
   },

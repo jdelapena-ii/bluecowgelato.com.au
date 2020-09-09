@@ -1,0 +1,32 @@
+/* True North Regular */
+@font-face {
+  font-family: "True North";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url("/fonts/true_north-webfont.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("/fonts/true_north-webfont.woff")
+      format("woff"); /* Modern Browsers */
+}
+
+/* True North Black */
+@font-face {
+  font-family: "True North";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 900;
+  src: url("/fonts/true_north_black-webfont.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("/fonts/true_north_black-webfont.woff")
+      format("woff"); /* Modern Browsers */
+}
+
+/* True North Dots */
+@font-face {
+  font-family: "True North Dots";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 900;
+  src: url("/fonts/true_north_rough_dots_black-webfont.woff2") format("woff2"),
+    /* Super Modern Browsers */
+      url("/fonts/true_north_rough_dots_black-webfont.woff") format("woff"); /* Modern Browsers */
+}
