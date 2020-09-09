@@ -1,18 +1,17 @@
 import React, { useState } from 'react';
-import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
 import { useForm } from 'react-hook-form';
 
-import {
-  NetlifyForm,
-  Input,
-  TextArea,
-  Checkbox,
-  Select,
-} from './form-elements';
+import { ContactForm, Input, TextArea, Select } from './form-elements';
+import { useGraphQL } from '../hooks';
 
 function Contact() {
   const { register, handleSubmit, errors } = useForm({ mode: 'onBlur' });
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const {
+    site: { siteMetadata },
+  } = useGraphQL();
 
   return (
     <article className="relative overflow-hidden bg-white">
@@ -23,14 +22,17 @@ function Contact() {
           </h2>
         </div>
         <div className="mt-12">
-          <NetlifyForm
+          <ContactForm
             handleSubmit={handleSubmit}
+            register={register}
             setIsSubmitting={setIsSubmitting}
+            action="/success/"
+            name="contact_form"
             className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
           >
             <Input
               name="first_name"
-              label="First name"
+              label="First Name"
               register={register}
               errors={errors}
             />
@@ -42,15 +44,15 @@ function Contact() {
             />
             <Input
               name="email"
-              label="Email"
+              label="Email Address"
               type="email"
               isFullWidth
               register={register}
               errors={errors}
             />
             <Input
-              name="phone_number"
-              label="Phone number"
+              name="contact_number"
+              label="Contact number"
               type="tel"
               isFullWidth
               register={register}
@@ -58,32 +60,15 @@ function Contact() {
             />
             <Select
               name="subject"
-              label="Subject"
-              defaultValue="Please choose:"
-              options={['First option', 'Second option', 'Third option']}
+              defaultValue="Subject (Please select one)"
+              options={['Option 01', 'Option 02', 'Option 03', 'Option 04']}
               isFullWidth
               register={register}
               errors={errors}
             />
             <TextArea
               name="message"
-              label="Message"
-              register={register}
-              errors={errors}
-            />
-            <Checkbox
-              name="agrees_to_privacy_policy"
-              label={
-                <>
-                  By selecting this, you agree to the{' '}
-                  <Link
-                    to="/privacy-policy/"
-                    className="inline-block underline"
-                  >
-                    Privacy Policy
-                  </Link>
-                </>
-              }
+              label="Your Message"
               register={register}
               errors={errors}
             />
@@ -100,7 +85,7 @@ function Contact() {
                 </button>
               </span>
             </div>
-          </NetlifyForm>
+          </ContactForm>
         </div>
       </div>
     </article>

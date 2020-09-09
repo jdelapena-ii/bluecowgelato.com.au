@@ -15,8 +15,7 @@ function TextArea({
     <div className="sm:col-span-2">
       <label htmlFor={name}>
         <span className="block text-sm font-medium leading-5 text-gray-700">
-          {label}
-          {required && ' *'}
+          {required}
         </span>
         <div className="relative mt-1 shadow-sm">
           <textarea
@@ -24,6 +23,7 @@ function TextArea({
             name={name}
             rows={rows}
             required={required}
+            placeholder={`${label}${required ? ':' : ''}`}
             aria-invalid={!!errors[name]}
             ref={register({
               required: <Error message={`${label} is a required field`} />,

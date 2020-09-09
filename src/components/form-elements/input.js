@@ -17,8 +17,7 @@ function Input({
     <div className={isFullWidth ? 'sm:col-span-2' : ''}>
       <label htmlFor={name}>
         <span className="block text-sm font-medium leading-5 text-gray-700">
-          {label}
-          {required && ' *'}
+          {required}
         </span>
         <div className="relative mt-1 shadow-sm">
           <input
@@ -26,6 +25,7 @@ function Input({
             name={name}
             type={type}
             required={required}
+            placeholder={`${label}${required ? ':' : ''}`}
             aria-invalid={!!errors[name]}
             ref={register({
               required: required && (
