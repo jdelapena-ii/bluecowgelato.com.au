@@ -2,15 +2,15 @@ import React from 'react';
 
 import { Layout, SEO } from '../components';
 
-function IndexPage() {
+function AboutPage() {
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="About" />
       <h1 className="py-48 text-5xl font-black text-center text-slate font-display">
-        Blue Cow Gelato
+        About
       </h1>
     </Layout>
   );
 }
 
-export default IndexPage;
+export default AboutPage;
