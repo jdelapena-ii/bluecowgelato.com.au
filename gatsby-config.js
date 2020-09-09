@@ -44,8 +44,8 @@ module.exports = {
         name: title,
         short_name: 'Blue Cow',
         start_url: '/',
-        background_color: fullConfig.theme.colors.teal['600'],
-        theme_color: fullConfig.theme.colors.teal['600'],
+        background_color: fullConfig.theme.colors['sky-blue'],
+        theme_color: fullConfig.theme.colors['sky-blue'],
         display: 'minimal-ui',
         icon: 'src/images/favicon.jpg', // This path is relative to the root of the site.
       },
