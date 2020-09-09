@@ -12,6 +12,11 @@ module.exports = {
   experimental: 'all',
   theme: {
     extend: {
+      colors: {
+        gold: '#fdd690',
+        'sky-blue': '#7a9bce',
+        slate: '#3a4a62',
+      },
       fontFamily: {
         display: ['True North', ...defaultTheme.fontFamily.sans],
         dots: ['True North Dots', ...defaultTheme.fontFamily.sans],
