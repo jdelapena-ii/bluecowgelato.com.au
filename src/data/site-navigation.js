@@ -5,8 +5,23 @@ import { FacebookIcon, InstagramIcon } from '../components/vectors';
 export const mainNavigation = [
   {
     id: nanoid(),
-    label: 'Home',
-    slug: '/',
+    label: 'Order Now',
+    slug: '/order-now/',
+  },
+  {
+    id: nanoid(),
+    label: 'Menu',
+    slug: '/menu/',
+  },
+  {
+    id: nanoid(),
+    label: 'About',
+    slug: '/about/',
+  },
+  {
+    id: nanoid(),
+    label: 'Contact',
+    slug: '/contact/',
   },
 ];
 
