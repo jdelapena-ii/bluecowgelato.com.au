@@ -38,7 +38,7 @@ function MobileMenu({ isOpen, setIsOpen }) {
           style={{ opacity: styles.opacity }}
           className="fixed inset-0 z-40 md:hidden"
         >
-          <div className="fixed inset-0 z-40 flex justify-end bg-gray-600 bg-opacity-75">
+          <div className="fixed inset-0 z-40 flex justify-end bg-black bg-opacity-75">
             <AnimatedDialogContent
               aria-label="Sidebar"
               style={{
@@ -46,7 +46,7 @@ function MobileMenu({ isOpen, setIsOpen }) {
                   (value) => `translate3d(${value}%, 0, 0)`
                 ),
               }}
-              className="relative flex flex-col flex-1 w-full max-w-xs py-4 bg-teal-800 focus:outline-none"
+              className="relative flex flex-col flex-1 w-full max-w-xs py-4 bg-slate focus:outline-none"
             >
               <div className="flex-shrink-0 w-14">
                 {/* Dummy element to force sidebar to shrink to fit close icon */}
@@ -74,7 +74,12 @@ function MobileMenu({ isOpen, setIsOpen }) {
                 </button>
               </div>
               <div className="flex items-center flex-shrink-0 px-4">
-                <Logo className="w-auto h-10 text-teal-300 fill-current" />
+                <Link
+                  to="/"
+                  className="flex items-center flex-shrink-0 text-white transition duration-150 ease-in-out rounded-full hover:opacity-75 focus:opacity-75"
+                >
+                  <Logo className="fill-current h-28" />
+                </Link>
               </div>
               <div className="flex-1 h-0 mt-5 overflow-y-auto">
                 <nav className="px-2">
@@ -82,10 +87,9 @@ function MobileMenu({ isOpen, setIsOpen }) {
                     <Link
                       key={node.id}
                       to={node.slug}
-                      className="flex items-center px-2 py-2 mt-1 text-base font-medium leading-6 text-teal-300 transition duration-150 ease-in-out rounded-md group hover:text-white hover:bg-teal-700 focus:outline-none focus:text-white focus:bg-teal-700"
-                      activeClassName="flex items-center px-2 py-2 text-base font-medium leading-6 text-white transition duration-150 ease-in-out bg-teal-900 rounded-md group focus:outline-none focus:bg-teal-700"
+                      className="flex items-center px-2 py-2 mt-1 text-base font-black leading-6 text-white uppercase transition duration-150 ease-in-out rounded-md font-display group hover:text-white hover:bg-sky-blue focus:shadow-none focus:text-white focus:bg-sky-blue"
+                      activeClassName="text-white bg-gold"
                     >
-                      <node.icon className="w-6 h-6 mr-4 text-teal-400 transition duration-150 ease-in-out group-hover:text-teal-300 group-focus:text-teal-300" />
                       {node.label}
                     </Link>
                   ))}
