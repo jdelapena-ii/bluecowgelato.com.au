@@ -1,7 +1,6 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 
-export function ContactIcon({ className }) {
+function ContactIcon(props) {
   return (
     <svg
       fill="none"
@@ -10,13 +9,11 @@ export function ContactIcon({ className }) {
       strokeWidth="2"
       stroke="currentColor"
       viewBox="0 0 24 24"
-      className={className}
+      {...props}
     >
       <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
     </svg>
   );
 }
 
-ContactIcon.propTypes = {
-  className: PropTypes.string,
-};
+export { ContactIcon };
