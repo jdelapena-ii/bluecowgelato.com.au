@@ -9094,6 +9094,11 @@ kebab-hash@^0.1.2:
   dependencies:
     lodash.kebabcase "^4.1.1"
 
+keen-slider@^5.2.3:
+  version "5.2.3"
+  resolved "https://registry.yarnpkg.com/keen-slider/-/keen-slider-5.2.3.tgz#cefbe8b93949f67a7e32914bb43275b9a301690d"
+  integrity sha512-aV41QXnzsdHmD1qWF/F7kTxcLwTdFHXLSSv7x3FLS7Y+yxoOKsHsFBmRz1a9TSZ8jTmLPerqJpsvsPL4NGUVmQ==
+
 keyv@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/keyv/-/keyv-3.0.0.tgz#44923ba39e68b12a7cec7df6c3268c031f2ef373"
@@ -13798,6 +13803,13 @@ table@^5.2.3:
     slice-ansi "^2.1.0"
     string-width "^3.0.0"
 
+tailwindcss-aspect-ratio@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/tailwindcss-aspect-ratio/-/tailwindcss-aspect-ratio-3.0.0.tgz#4f9fc7ca0f3468373290faaa8b92652157bee6a4"
+  integrity sha512-syVueHOdk0u6S9lFSQQxHwsYS+9AJ0tp1WWBB+vAwmJYzc9g/2OLwq4mHpigYue6t3PUgTSbRi9unQd7WEDjGQ==
+  dependencies:
+    lodash "^4.17.15"
+
 tailwindcss@^1.8.3:
   version "1.8.3"
   resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-1.8.3.tgz#2fec8429cd0ed15195086d1c0aa4a230fc1cd1a0"
@@ -14266,11 +14278,6 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
-
-typeface-inter@^3.15.0:
-  version "3.15.0"
-  resolved "https://registry.yarnpkg.com/typeface-inter/-/typeface-inter-3.15.0.tgz#7ac09c0bcc5fdd5c5b85727df6478ee287f56deb"
-  integrity sha512-kWLJsvqSJTBKilu1HsBYHwi3usFg8JQ9I9u+bcU2kOkIi48fOZy8sYacbFmlJ9EHRVNqqvM4zeI73WCSKNMOuQ==
 
 typeface-montserrat@^0.0.75:
   version "0.0.75"

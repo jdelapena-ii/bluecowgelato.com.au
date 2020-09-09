@@ -14,7 +14,7 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="absolute inset-x-0 top-0 z-20 h-36 bg-sky-blue">
+    <nav className="fixed inset-x-0 top-0 z-20 bg-transparent h-36">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="flex justify-between">
           <div className="flex items-center py-4">

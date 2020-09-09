@@ -1,6 +1,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 const tailwindUI = require('@tailwindcss/ui');
 const typography = require('@tailwindcss/typography');
+const tailwindcssAspectRatio = require('tailwindcss-aspect-ratio');
 
 // See https://tailwindcss.com/docs/configuration for details
 module.exports = {
@@ -11,6 +12,10 @@ module.exports = {
   },
   experimental: 'all',
   theme: {
+    aspectRatio: {
+      // defaults to {}
+      '16/9': [16, 9], // or 16 / 9
+    },
     extend: {
       colors: {
         gold: '#fdd690',
@@ -21,6 +26,18 @@ module.exports = {
         display: ['True North', ...defaultTheme.fontFamily.sans],
         dots: ['True North Dots', ...defaultTheme.fontFamily.sans],
         sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
+      },
+      maxWidth: {
+        'screen-2xl': '48rem',
+        'screen-3xl': '56rem',
+        'screen-4xl': '64rem',
+        'screen-5xl': '72rem',
+        'screen-7xl': '80rem',
+        'screen-8xl': '88rem',
+        'screen-9xl': '96rem',
+        'screen-10xl': '104rem',
+        'screen-11xl': '112rem',
+        'screen-12xl': '120rem',
       },
     },
   },
@@ -34,5 +51,6 @@ module.exports = {
     tailwindUI,
     // See https://github.com/tailwindlabs/tailwindcss-typography for details
     typography,
+    tailwindcssAspectRatio,
   ],
 };
