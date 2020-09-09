@@ -24,6 +24,7 @@ module.exports = {
     description: '',
     author: '',
     siteUrl,
+    phone: '0491 060 099',
   },
   plugins: [
     'gatsby-plugin-netlify',

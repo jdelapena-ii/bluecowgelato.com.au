@@ -28,6 +28,7 @@ function useGraphQL() {
         site {
           siteMetadata {
             title
+            phone
           }
         }
       }
