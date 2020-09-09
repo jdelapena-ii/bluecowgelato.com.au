@@ -1,45 +1,80 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import { Link } from 'gatsby';
 
+import { useGraphQL } from '../hooks';
 import { mainNavigation } from '../data';
 import { Logo } from './vectors';
 import { MobileMenu } from './mobile-menu';
 
 function Header() {
+  const {
+    site: { siteMetadata },
+  } = useGraphQL();
+
   const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <nav className="sticky top-0 z-20 bg-white shadow">
+    <nav className="absolute inset-x-0 top-0 z-20 h-36 bg-sky-blue">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          <div className="flex items-center">
+        <div className="flex justify-between">
+          <div className="flex items-center py-4">
             <Link
               to="/"
-              className="flex items-center flex-shrink-0 text-teal-500 transition duration-150 ease-in-out rounded-full hover:text-teal-700 focus:text-teal-700"
+              className="flex items-center flex-shrink-0 text-white transition duration-150 ease-in-out rounded-full hover:opacity-75 focus:opacity-75"
             >
-              <Logo className="h-10 fill-current" />
+              <Logo className="fill-current h-28" />
             </Link>
           </div>
-          <div className="hidden space-x-8 sm:ml-6 sm:flex">
-            {mainNavigation.map((node) => (
-              <Link
-                key={node.id}
-                to={node.slug}
-                partiallyActive={node.slug !== '/'}
-                activeClassName="text-gray-900 border-teal-500 focus:border-teal-700"
-                className="inline-flex items-center px-1 pt-1 text-sm font-medium leading-5 text-gray-500 transition duration-150 ease-in-out border-b-2 border-transparent hover:text-gray-700 hover:border-gray-300 focus:shadow-none focus:text-gray-700 focus:border-gray-300"
-              >
-                {node.label}
-              </Link>
+          <div className="hidden space-x-8 md:ml-6 md:flex">
+            {mainNavigation.map((node, index) => (
+              <Fragment key={node.id}>
+                <Link
+                  to={node.slug}
+                  partiallyActive={node.slug !== '/'}
+                  activeClassName="text-slate"
+                  className="inline-flex items-center px-1 text-sm font-normal leading-5 text-white uppercase whitespace-no-wrap transition duration-150 ease-in-out font-display hover:opacity-75 focus:shadow-outline-gray focus:opacity-75"
+                >
+                  {node.label}
+                </Link>
+                {index !== mainNavigation.length - 1 && (
+                  <span
+                    aria-hidden
+                    className="inline-flex items-center px-1 text-sm font-normal leading-5 text-white font-display"
+                  >
+                    |
+                  </span>
+                )}
+              </Fragment>
             ))}
+            <a
+              href={`tel:${siteMetadata.phone.split(' ').join('')}`}
+              aria-label={`Phone: ${siteMetadata.phone}`}
+              className="inline-flex items-center p-2 my-auto text-white rounded-full font-display bg-sky-blue"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                className="w-8 h-8"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                />
+              </svg>
+            </a>
           </div>
-          <div className="flex items-center -mr-2 sm:hidden">
+          <div className="flex items-center -mr-2 md:hidden">
             {/* Mobile menu button */}
             <button
               type="button"
               onClick={() => setIsOpen((prevState) => !prevState)}
               aria-label="Main menu"
               aria-expanded="false"
-              className="inline-flex items-center justify-center p-2 text-gray-400 transition duration-150 ease-in-out rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500"
+              className="inline-flex items-center justify-center p-2 text-white transition duration-150 ease-in-out rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500"
             >
               {isOpen ? (
                 <svg
