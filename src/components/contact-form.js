@@ -1,28 +1,26 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
-import { ContactForm, Input, TextArea, Select } from './form-elements';
+import { NetlifyForm, Input, TextArea, Select } from './form-elements';
 
-function Contact() {
+function ContactForm() {
   const { register, handleSubmit, errors } = useForm({ mode: 'onBlur' });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   return (
-    <article className="relative overflow-hidden bg-white">
-      <div className="relative max-w-xl px-4 py-12 mx-auto bg-gray-50 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h2 className="pb-8 text-3xl font-bold tracking-wide text-center uppercase text-slate font-display">
+    <article className="relative px-4 py-12 sm:px-6 lg:px-8">
+      <div className="relative w-full max-w-2xl mx-auto bg-white rounded-lg shadow-2xl">
+        <div className="px-4 py-12 shadow-sm sm:px-6 lg:px-8">
+          <h2 className="pb-8 text-3xl font-black tracking-wide text-center uppercase text-slate font-display">
             Get in touch with our team
           </h2>
-        </div>
-        <div className="gap-12 mt-12 text-center">
-          <ContactForm
+          <NetlifyForm
             handleSubmit={handleSubmit}
             register={register}
             setIsSubmitting={setIsSubmitting}
             action="/success/"
             name="contact_form"
-            className="w-full max-w-lg p-6 mx-auto space-y-6 tracking-wide transform bg-white shadow-sm lg:max-w-none md:-translate-y-14"
+            className="w-full max-w-lg mx-auto space-y-6"
           >
             <Input
               name="first_name"
@@ -73,7 +71,7 @@ function Contact() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`inline-flex object-right w-full px-6 py-1 font-bold uppercase text-base  tracking-wide leading-6 text-white transition duration-150 ease-in-out bg-gray-800 border border-transparent rounded-lg hover:bg-gray-700 focus:border-gray-900 active:bg-gray-900 ${
+                  className={`inline-flex w-full px-6 py-1 text-xl font-black leading-6 tracking-wide text-white uppercase transition duration-150 ease-in-out bg-gray-800 border border-transparent rounded-lg font-display hover:bg-gray-700 focus:border-gray-900 active:bg-gray-900 ${
                     isSubmitting ? 'opacity-50 cursor-wait' : ''
                   }`}
                 >
@@ -81,11 +79,11 @@ function Contact() {
                 </button>
               </span>
             </div>
-          </ContactForm>
+          </NetlifyForm>
         </div>
       </div>
     </article>
   );
 }
 
-export { Contact };
+export { ContactForm };

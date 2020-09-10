@@ -4,4 +4,3 @@ export * from './netlify-form';
 export * from './input';
 export * from './select';
 export * from './textarea';
-export * from './contact-form';

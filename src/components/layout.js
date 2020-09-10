@@ -13,7 +13,7 @@ import { Footer } from './footer';
 
 function Layout({ children }) {
   return (
-    <div className="relative flex flex-col min-h-screen font-sans antialiased bg-white text-slate fill-available">
+    <div className="relative flex flex-col min-h-screen font-sans antialiased bg-sky-blue text-slate fill-available">
       <Header />
       <main className="flex-1">{children}</main>
       <Footer />

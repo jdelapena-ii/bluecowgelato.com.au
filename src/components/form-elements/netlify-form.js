@@ -10,6 +10,7 @@ function NetlifyForm({
   className,
   handleSubmit,
   name = 'contact_form',
+  register,
   setIsSubmitting,
 }) {
   function encode(data) {
@@ -46,7 +47,7 @@ function NetlifyForm({
       onSubmit={handleSubmit(onSubmit)}
       className={className}
     >
-      <BotField />
+      <BotField register={register} />
       {children}
     </form>
   );
@@ -58,6 +59,7 @@ NetlifyForm.propTypes = {
   className: PropTypes.string,
   handleSubmit: PropTypes.func.isRequired,
   name: PropTypes.string,
+  register: PropTypes.func,
   setIsSubmitting: PropTypes.func.isRequired,
 };
 
