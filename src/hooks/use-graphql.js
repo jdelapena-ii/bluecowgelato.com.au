@@ -31,8 +31,8 @@ function useGraphQL() {
             social {
               facebook
               instagram
-              phone
             }
+            phone
           }
         }
         homeCarouselImages: allFile(
