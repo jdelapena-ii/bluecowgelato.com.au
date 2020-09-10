@@ -31,6 +31,23 @@ function useGraphQL() {
             phone
           }
         }
+
+        homeCarouselImages: allFile(
+          filter: {
+            extension: { regex: "/(jpg)|(png)|(tif)|(tiff)|(webp)|(jpeg)/" }
+            relativeDirectory: { eq: "home-carousel" }
+          }
+        ) {
+          edges {
+            node {
+              childImageSharp {
+                fluid(maxWidth: 1920, quality: 100) {
+                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                }
+              }
+            }
+          }
+        }
       }
     `
   );
