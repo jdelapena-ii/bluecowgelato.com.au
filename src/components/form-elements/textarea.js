@@ -28,7 +28,7 @@ function TextArea({
             ref={register({
               required: <Error message={`${label} is a required field`} />,
             })}
-            className="block w-full px-4 py-3 transition duration-150 ease-in-out rounded-lg form-textarea"
+            className="block w-full px-4 py-2 transition duration-150 ease-in-out rounded-lg form-textarea"
           />
         </div>
       </label>
