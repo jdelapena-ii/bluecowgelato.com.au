@@ -66,8 +66,8 @@ function Contact() {
               register={register}
               errors={errors}
             />
-            <div className="sm:col-span-2">
-              <p className="object-left">*All fields required</p>
+            <div className="flex justify-between">
+              <p>*All fields required</p>
               <span className="inline-flex shadow-sm">
                 <button
                   type="submit"
