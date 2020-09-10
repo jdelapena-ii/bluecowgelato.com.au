@@ -31,10 +31,10 @@ function useGraphQL() {
             social {
               facebook
               instagram
-            phone
+              phone
+            }
           }
         }
-
         homeCarouselImages: allFile(
           filter: {
             extension: { regex: "/(jpg)|(png)|(tif)|(tiff)|(webp)|(jpeg)/" }
