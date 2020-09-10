@@ -14,7 +14,7 @@ function Footer() {
   const socialLinks = useSocialLinks();
 
   return (
-    <footer className="">
+    <footer className="bg-white">
       {/* Business Logo */}
       <BusinessLogo />
       {/* Business Logo */}
