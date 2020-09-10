@@ -25,6 +25,10 @@ module.exports = {
     author: '',
     siteUrl,
     phone: '0491 060 099',
+    social: {
+      facebook: 'https://www.facebook.com/bluecowgelato/',
+      instagram: 'https://www.instagram.com/bluecowgelato/',
+    },
   },
   plugins: [
     'gatsby-plugin-netlify',

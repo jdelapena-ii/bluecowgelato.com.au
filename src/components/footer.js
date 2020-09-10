@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
-
 import { useGraphQL } from '../hooks';
-import { footerNavigation, socialLinks } from '../data';
+import { footerNavigation, useSocialLinks } from '../data';
+import { BusinessLogo } from './business-logo';
 
 function Footer() {
   const {
@@ -10,8 +10,14 @@ function Footer() {
       siteMetadata: { title },
     },
   } = useGraphQL();
+
+  const socialLinks = useSocialLinks();
+
   return (
-    <footer className="bg-white">
+    <footer className="">
+      {/* Business Logo */}
+      <BusinessLogo />
+      {/* Business Logo */}
       <div className="max-w-screen-xl px-4 py-12 mx-auto overflow-hidden sm:px-6 lg:px-8">
         <nav className="flex flex-wrap justify-center -mx-5 -my-2">
           {footerNavigation.map((node) => (
