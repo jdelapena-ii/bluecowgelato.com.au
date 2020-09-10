@@ -7,8 +7,8 @@ function IndexPage() {
   return (
     <Layout>
       <SEO title="Home" />
-      <InstagramWidget />
       <Hero />
+      <InstagramWidget />
     </Layout>
   );
 }
