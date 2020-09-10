@@ -65,7 +65,7 @@
     "develop": "gatsby develop --host=0.0.0.0 --open",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "start": "yarn develop",
+    "start": "netlify dev",
     "serve": "gatsby serve --host=0.0.0.0 --open"
   },
   "devDependencies": {

@@ -1,8 +1,9 @@
 import { nanoid } from 'nanoid';
 
 import { FacebookIcon, InstagramIcon } from '../components/vectors';
+import { useGraphQL } from '../hooks';
 
-export const mainNavigation = [
+const mainNavigation = [
   {
     id: nanoid(),
     label: 'Order Now',
@@ -25,19 +26,27 @@ export const mainNavigation = [
   },
 ];
 
-export const footerNavigation = [{ id: nanoid(), label: 'Home', slug: '/' }];
+const footerNavigation = [{ id: nanoid(), label: 'Home', slug: '/' }];
 
-export const socialLinks = [
-  {
-    id: nanoid(),
-    label: 'Facebook',
-    url: 'https://www.facebook.com/bluecowgelato/',
-    icon: FacebookIcon,
-  },
-  {
-    id: nanoid(),
-    label: 'Instagram',
-    url: 'https://www.instagram.com/bluecowgelato/',
-    icon: InstagramIcon,
-  },
-];
+function useSocialLinks() {
+  const {
+    site: { siteMetadata },
+  } = useGraphQL();
+  const socialLinks = [
+    {
+      id: nanoid(),
+      label: 'Facebook',
+      url: siteMetadata.social.facebook,
+      icon: FacebookIcon,
+    },
+    {
+      id: nanoid(),
+      label: 'Instagram',
+      url: siteMetadata.social.instagram,
+      icon: InstagramIcon,
+    },
+  ];
+  return socialLinks;
+}
+
+export { mainNavigation, footerNavigation, useSocialLinks };

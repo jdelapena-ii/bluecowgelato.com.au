@@ -28,6 +28,9 @@ function useGraphQL() {
         site {
           siteMetadata {
             title
+            social {
+              facebook
+              instagram
             phone
           }
         }

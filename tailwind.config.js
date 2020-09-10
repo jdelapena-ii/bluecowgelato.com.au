@@ -1,7 +1,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 const tailwindUI = require('@tailwindcss/ui');
 const typography = require('@tailwindcss/typography');
-const tailwindcssAspectRatio = require('tailwindcss-aspect-ratio');
+const aspectRatio = require('tailwindcss-aspect-ratio');
 
 // See https://tailwindcss.com/docs/configuration for details
 module.exports = {
@@ -13,8 +13,8 @@ module.exports = {
   experimental: 'all',
   theme: {
     aspectRatio: {
-      // defaults to {}
-      '16/9': [16, 9], // or 16 / 9
+      square: [1, 1],
+      '16/9': [16, 9],
     },
     extend: {
       colors: {
@@ -47,10 +47,11 @@ module.exports = {
     boxShadow: ['responsive', 'hover', 'focus', 'group-focus'],
   },
   plugins: [
+    // See https://github.com/webdna/tailwindcss-aspect-ratio for details
+    aspectRatio,
     // See https://tailwindui.com/documentation for details
     tailwindUI,
     // See https://github.com/tailwindlabs/tailwindcss-typography for details
     typography,
-    tailwindcssAspectRatio,
   ],
 };
