@@ -1,34 +1,28 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import { useForm } from 'react-hook-form';
 
 import { ContactForm, Input, TextArea, Select } from './form-elements';
-import { useGraphQL } from '../hooks';
 
 function Contact() {
   const { register, handleSubmit, errors } = useForm({ mode: 'onBlur' });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const {
-    site: { siteMetadata },
-  } = useGraphQL();
-
   return (
     <article className="relative overflow-hidden bg-white">
       <div className="relative max-w-xl px-4 py-12 mx-auto bg-gray-50 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-center text-gray-900">
+          <h2 className="pb-8 text-3xl font-bold tracking-wide text-center uppercase text-slate font-display">
             Get in touch with our team
           </h2>
         </div>
-        <div className="mt-12">
+        <div className="gap-12 mt-12 text-center">
           <ContactForm
             handleSubmit={handleSubmit}
             register={register}
             setIsSubmitting={setIsSubmitting}
             action="/success/"
             name="contact_form"
-            className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
+            className="w-full max-w-lg p-6 mx-auto space-y-6 tracking-wide transform bg-white shadow-sm lg:max-w-none md:-translate-y-14"
           >
             <Input
               name="first_name"
@@ -73,11 +67,12 @@ function Contact() {
               errors={errors}
             />
             <div className="sm:col-span-2">
-              <span className="inline-flex w-full shadow-sm">
+              <p className="object-left">*All fields required</p>
+              <span className="inline-flex shadow-sm">
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`inline-flex items-center justify-center w-full px-6 py-3 text-base font-medium leading-6 text-white transition duration-150 ease-in-out bg-gray-800 border border-transparent rounded-none hover:bg-gray-700 focus:border-gray-900 active:bg-gray-900 ${
+                  className={`inline-flex object-right w-full px-6 py-1 font-bold uppercase text-base  tracking-wide leading-6 text-white transition duration-150 ease-in-out bg-gray-800 border border-transparent rounded-lg hover:bg-gray-700 focus:border-gray-900 active:bg-gray-900 ${
                     isSubmitting ? 'opacity-50 cursor-wait' : ''
                   }`}
                 >
