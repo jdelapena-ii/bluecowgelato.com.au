@@ -54,6 +54,7 @@ function Contact() {
             />
             <Select
               name="subject"
+              label="Subject"
               defaultValue="Subject (Please select one)"
               options={['Option 01', 'Option 02', 'Option 03', 'Option 04']}
               isFullWidth
