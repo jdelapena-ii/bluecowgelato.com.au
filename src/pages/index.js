@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Layout, SEO, InstagramWidget } from '../components';
+import { Layout, SEO, InstagramWidget, AboutSection } from '../components';
 import { Hero } from '../components/hero-carousel';
 
 function IndexPage() {
@@ -8,6 +8,7 @@ function IndexPage() {
     <Layout>
       <SEO title="Home" />
       <Hero />
+      <AboutSection />
       <InstagramWidget />
     </Layout>
   );
