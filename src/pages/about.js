@@ -1,13 +1,16 @@
 import React from 'react';
-import GatsbyImage from 'gatsby';
+import GatsbyImage from 'gatsby-image';
 import PropTypes from 'prop-types';
 
 import { Layout, SEO, ContactForm } from '../components';
+import { useGraphQL } from '../hooks';
 
 function AboutPage() {
+  const { aboutHeroImage } = useGraphQL();
   return (
     <Layout>
       <SEO title="About" />
+      <AboutHero image={aboutHeroImage.childImageSharp.fluid} />
       <h1 className="py-48 text-5xl font-black text-center text-slate font-display">
         About
       </h1>
@@ -25,7 +28,7 @@ function AboutHero({ image }) {
 }
 
 AboutHero.propTypes = {
-  image: PropTypes.node.isRequired,
+  image: PropTypes.object.isRequired,
 };
 
 export default AboutPage;
