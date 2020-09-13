@@ -7,17 +7,25 @@ import { useGraphQL } from '../hooks';
 function AboutSection() {
   const { aboutHeroImage } = useGraphQL();
   return (
-    <article className="relative flex flex-col justify-between overflow-hidden">
-      <GatsbyImage fluid={aboutHeroImage.childImageSharp.fluid} />
-      <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black via-transparent" />
-      <div className="absolute inset-0 flex items-center justify-center">
-        <Link
+    <article className="relative flex flex-col justify-between overflow-hidden aspect-ratio-2/9">
+      <GatsbyImage
+        fluid={aboutHeroImage.childImageSharp.fluid}
+        className="absolute inset-0 h-1/3"
+        style={{ marginRight: '-15px' }}
+      />
+      <div className="absolute px-40 py-28 xs:px-6 text-shadow">
+        <div className="grid p-10 mx-auto mt-12 prose text-left text-gray-600 bg-gray-200 border-2 border-gray-200 rounded-lg">
+          <h2 className="text-center">ABOUT</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <Link
           to="/about/"
-          className="block w-full max-w-xs px-4 py-4 mx-auto my-24 text-2xl font-bold leading-none tracking-widest text-center uppercase transition duration-300 ease-in-out border-2 border-white text-shadow hover:bg-white hover:text-black hover:text-shadow-none focus:bg-white focus:text-black focus:text-shadow-none"
-        >
-          Read more
-        </Link>
-      </div>
+          className="block w-40 max-w-xs px-2 py-1 mx-auto font-black leading-none text-center text-white bg-white border-2 border-white rounded-md sm:text-5xl md:text-2xl font-display"
+          >
+            Read more
+          </Link>
+        </div>
+      </div> 
     </article>
   );
 }
