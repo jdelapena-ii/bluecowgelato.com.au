@@ -21,9 +21,9 @@ function Header() {
 
   return (
     <nav
-      className={`fixed inset-x-0 top-0 z-20 ${
-        isHeaderActive ? 'bg-white shadow-md' : 'bg-transparent'
-      } h-36`}
+      className={`fixed inset-x-0 top-0 z-20 transition ease-in-out duration-300 ${
+        isHeaderActive ? 'bg-sky-blue shadow-md' : 'bg-transparent'
+      }`}
     >
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="flex justify-between">
@@ -32,7 +32,11 @@ function Header() {
               to="/"
               className="flex items-center flex-shrink-0 text-white transition duration-150 ease-in-out rounded-full hover:opacity-75 focus:opacity-75"
             >
-              <Logo className="fill-current h-28" />
+              <Logo
+                className={`fill-current transition-all ease-in-out duration-300 ${
+                  isHeaderActive ? ' h-20' : 'h-28'
+                }`}
+              />
             </Link>
           </div>
           <div className="hidden space-x-8 md:ml-6 md:flex">

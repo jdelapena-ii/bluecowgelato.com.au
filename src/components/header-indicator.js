@@ -13,14 +13,11 @@ function HeaderIndicator() {
   });
 
   useEffect(() => {
-    if (inView) {
+    if (!inView) {
       setIsHeaderActive(true);
     } else {
       setIsHeaderActive(false);
     }
-
-    console.log('inView', inView);
-    console.log('isHeaderActive', isHeaderActive);
   }, [inView, setIsHeaderActive]);
 
   return <article ref={ref} />;
