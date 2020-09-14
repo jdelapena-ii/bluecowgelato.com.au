@@ -14,7 +14,7 @@ function AboutSection() {
         style={{ marginRight: '-15px' }}
       />
       <div className="absolute px-40 py-28 xs:px-6 text-shadow">
-        <div className="grid p-10 mx-auto mt-12 prose text-left text-gray-600 bg-gray-200 border-2 border-gray-200 rounded-lg">
+        <div className="grid p-10 mx-auto mt-12 prose text-left text-gray-600 bg-gray-200 bg-opacity-75 rounded-lg">
           <h2 className="text-center">ABOUT</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
