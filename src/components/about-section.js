@@ -10,7 +10,7 @@ function AboutSection() {
     <article className="relative flex flex-col justify-between overflow-hidden aspect-ratio-2/9">
       <GatsbyImage
         fluid={aboutHeroImage.childImageSharp.fluid}
-        className="absolute inset-0 h-1/3"
+        className="absolute inset-0 object-fill h-screen"
         style={{ marginRight: '-15px' }}
       />
       <div className="absolute px-40 py-28 xs:px-6 text-shadow">
