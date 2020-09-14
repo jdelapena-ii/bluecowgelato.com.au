@@ -11,7 +11,7 @@ function AboutPage() {
     <Layout>
       <SEO title="About" />
       <AboutHero image={aboutHeroImage.childImageSharp.fluid} />
-      <ContactForm />
+      <ContactForm bgColorClass="bg-gold" />
       <InstagramWidget />
     </Layout>
   );
@@ -19,17 +19,32 @@ function AboutPage() {
 
 function AboutHero({ image }) {
   return (
-    <article className="relative flex flex-col justify-between overflow-hidden">
-      <GatsbyImage
-        fluid={image}
-        className="absolute inset-0"
-        style={{ marginTop: '-66px', marginRight: '-15px' }}
-      />
-      <div className="absolute px-40 py-28 xs:px-6 text-shadow">
-        <div className="grid p-10 mx-auto mt-12 prose text-left text-gray-600 bg-gray-200 bg-opacity-75 rounded-lg transparent">
-          <h2 className="text-center">ABOUT</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <article className="relative px-4 pt-48 pb-16 overflow-hidden sm:px-6 lg:px-8">
+      <div className="absolute inset-0 flex">
+        <GatsbyImage fluid={image} className="flex-1" />
+      </div>
+
+      <div className="relative w-full mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div className="p-12 bg-white bg-opacity-75 rounded-lg md:max-w-md ">
+          <h1 className="text-5xl text-center text-slate font-dots">About</h1>
+          <p className="mt-10 prose text-sltate">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+            maiores architecto sequi odio consectetur, harum neque modi magnam
+            quos sapiente possimus nisi eum. Ducimus sit sint ab dolor corrupti
+            fugit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Recusandae maiores architecto sequi odio consectetur, harum neque
+            modi magnam quos sapiente possimus nisi eum. Ducimus sit sint ab
+            dolor corrupti fugit.
+          </p>
+          <p className="mt-6 prose text-sltate">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+            maiores architecto sequi odio consectetur, harum neque modi magnam
+            quos sapiente possimus nisi eum. Ducimus sit sint ab dolor corrupti
+            fugit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Recusandae maiores architecto sequi odio consectetur, harum neque
+            modi magnam quos sapiente possimus nisi eum. Ducimus sit sint ab
+            dolor corrupti fugit.
+          </p>
         </div>
       </div>
     </article>
