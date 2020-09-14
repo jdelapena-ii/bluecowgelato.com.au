@@ -1,6 +1,6 @@
 import { useGraphQL } from '../hooks';
 
-export function Carousel() {
+function useSlides() {
   const { homeCarouselImages } = useGraphQL();
 
   const slides = [
@@ -24,5 +24,7 @@ export function Carousel() {
     },
   ];
 
-  return { slides };
+  return slides;
 }
+
+export { useSlides };
