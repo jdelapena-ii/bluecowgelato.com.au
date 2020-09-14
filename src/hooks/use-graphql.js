@@ -32,6 +32,13 @@ function useGraphQL() {
             }
           }
         }
+        aboutSectionImage: file(relativePath: { eq: "hero2-cut.png" }) {
+          childImageSharp {
+            fluid(maxWidth: 1920) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         site {
           siteMetadata {
             title

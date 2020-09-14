@@ -5,12 +5,12 @@ import { Link } from 'gatsby';
 import { useGraphQL } from '../hooks';
 
 function AboutSection() {
-  const { aboutHeroImage } = useGraphQL();
+  const { aboutSectionImage } = useGraphQL();
   return (
     <article className="relative flex flex-col justify-between overflow-hidden aspect-ratio-2/9">
       <GatsbyImage
-        fluid={aboutHeroImage.childImageSharp.fluid}
-        className="absolute inset-0 object-fill h-screen"
+        fluid={aboutSectionImage.childImageSharp.fluid}
+        className="absolute inset-0 object-cover"
         style={{ marginRight: '-15px' }}
       />
       <div className="absolute px-40 py-28 xs:px-6 text-shadow">
