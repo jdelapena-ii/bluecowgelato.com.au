@@ -25,6 +25,13 @@ function useGraphQL() {
             }
           }
         }
+        cartImage: file(relativePath: { eq: "cart5.png" }) {
+          childImageSharp {
+            fluid(maxWidth: 1920) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         site {
           siteMetadata {
             title

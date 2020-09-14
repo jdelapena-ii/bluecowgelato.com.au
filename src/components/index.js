@@ -5,3 +5,4 @@ export * from './layout';
 export * from './seo';
 export * from './sidebar';
 export * from './instagram-widget';
+export * from './text-with-image';
