@@ -5,3 +5,5 @@ export * from './layout';
 export * from './seo';
 export * from './sidebar';
 export * from './instagram-widget';
+export * from './hero-carousel';
+export * from './header-indicator';

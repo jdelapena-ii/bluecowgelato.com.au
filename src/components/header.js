@@ -1,7 +1,7 @@
-import React, { useState, Fragment } from 'react';
+import React, { useState, Fragment, useEffect } from 'react';
 import { Link } from 'gatsby';
 
-import { useGraphQL } from '../hooks';
+import { useGraphQL, useSiteContext } from '../hooks';
 import { mainNavigation } from '../data';
 import { Logo } from './vectors';
 import { MobileMenu } from './mobile-menu';
@@ -11,10 +11,20 @@ function Header() {
     site: { siteMetadata },
   } = useGraphQL();
 
+  const { isHeaderActive, setIsHeaderActive } = useSiteContext();
+
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    console.log(isHeaderActive);
+  }, [isHeaderActive]);
+
   return (
-    <nav className="fixed inset-x-0 top-0 z-20 bg-transparent h-36">
+    <nav
+      className={`fixed inset-x-0 top-0 z-20 ${
+        isHeaderActive ? 'bg-white shadow-md' : 'bg-transparent'
+      } h-36`}
+    >
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="flex justify-between">
           <div className="flex items-center py-4">

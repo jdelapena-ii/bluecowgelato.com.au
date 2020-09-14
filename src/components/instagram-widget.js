@@ -26,7 +26,7 @@ function InstagramWidget() {
           {instagramFeed.map((feed, index) => (
             <div
               key={index}
-              className={index === instagramFeed.length - 1 && 'lg:hidden'}
+              className={index === instagramFeed.length - 1 ? 'lg:hidden' : ''}
             >
               <a
                 href={feed.url}

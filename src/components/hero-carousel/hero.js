@@ -52,7 +52,7 @@ function Hero() {
 
         {/* TODO: Update arrow icons */}
         {slider && (
-          <div className="absolute inset-0 flex items-center justify-between w-full px-4 pointer-events-none sm:px-6 lg:px-8 max-w-7xl">
+          <div className="absolute inset-0 flex items-center justify-between w-full px-4 mx-auto pointer-events-none sm:px-6 lg:px-8 max-w-7xl">
             <ArrowLeft onClick={(e) => e.stopPropagation() || slider.prev()} />
             <ArrowRight onClick={(e) => e.stopPropagation() || slider.next()} />
           </div>
