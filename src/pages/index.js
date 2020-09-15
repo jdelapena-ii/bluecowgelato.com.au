@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { Layout, SEO, InstagramWidget, TextWithImage } from '../components';
 import { Hero } from '../components/hero-carousel';
@@ -52,5 +53,8 @@ function CustomCakes({ bgColorClass }) {
     </article>
   );
 }
+CustomCakes.propTypes = {
+  bgColorClass: PropTypes.string,
+};
 
 export default IndexPage;
