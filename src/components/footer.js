@@ -1,53 +1,53 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { useGraphQL } from '../hooks';
-import { footerNavigation, useSocialLinks } from '../data';
+
 import { BusinessLogo } from './business-logo';
+import { Logo } from './vectors';
 
 function Footer() {
-  const {
-    site: {
-      siteMetadata: { title },
-    },
-  } = useGraphQL();
-
-  const socialLinks = useSocialLinks();
-
   return (
-    <footer className="bg-white">
-      {/* Business Logo */}
+    <footer className="bg-slate">
       <BusinessLogo />
-      {/* Business Logo */}
-      <div className="max-w-screen-xl px-4 py-12 mx-auto overflow-hidden sm:px-6 lg:px-8">
-        <nav className="flex flex-wrap justify-center -mx-5 -my-2">
-          {footerNavigation.map((node) => (
-            <div key={node.id} className="px-5 py-2">
-              <Link
-                to={node.slug}
-                className="text-base leading-6 text-gray-500 transition duration-150 ease-in-out hover:text-gray-900"
-              >
-                {node.label}
-              </Link>
-            </div>
-          ))}
-        </nav>
-        <div className="flex justify-center mt-8 space-x-6">
-          {socialLinks.map((node) => (
-            <a
-              key={node.id}
-              href={node.url}
-              className="text-gray-400 transition duration-150 ease-in-out hover:text-gray-500 focus:text-gray-500 focus:shadow-none"
-            >
-              <span className="sr-only">{node.label}</span>
-              <node.icon className="w-6 h-6" />
-            </a>
-          ))}
+
+      <div className="max-w-screen-xl px-4 py-6 pb-12 mx-auto overflow-hidden sm:px-6 lg:px-8">
+        <div className="flex justify-center py-4">
+          <Link
+            to="/"
+            className="flex items-center flex-shrink-0 text-white transition duration-150 ease-in-out rounded-full hover:opacity-75 focus:opacity-75"
+          >
+            <Logo className="fill-current w-28 md:w-48" />
+          </Link>
         </div>
-        <div className="mt-8">
-          <p className="text-base leading-6 text-center text-gray-400">
-            &copy; {new Date().getFullYear()} {title}. All rights reserved.
-          </p>
+        <div className="flex flex-col items-center justify-center mt-2 text-white sm:flex-row font-display">
+          <a href="tel:0404040404" className="text-sm uppercase sm:text-base">
+            PHONE: 0404 040 404
+          </a>
+          <div className="w-6 sm:w-0.5 bg-white my-2 sm:my-0 sm:mx-6 h-0.5 sm:h-4" />
+          <a
+            href="mailto:info@eatdessertfirst.com.au"
+            className="text-sm text-center uppercase break-all sm:text-base"
+          >
+            EMAIL: online@bluecowgelato.com.au
+          </a>
         </div>
+
+        <a
+          href="https://goo.gl/maps/Xgic2nCnqNeL9z888"
+          target="_blank"
+          rel="noreferrer"
+          className="block mt-4 text-sm text-center text-white uppercase sm:text-base font-display sm:mt-0"
+        >
+          Located at the bottom end of (1/72) Clarence street, Port Macquarie
+        </a>
+
+        <a
+          href="https://www.phirannodesigns.com.au/"
+          target="_blank"
+          rel="noreferrer"
+          className="block mt-4 text-xs text-center text-white sm:text-base"
+        >
+          Website by Phiranno Designs
+        </a>
       </div>
     </footer>
   );

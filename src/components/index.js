@@ -1,4 +1,4 @@
-export * from './contact-form';
+export * from './contact';
 export * from './business-logo';
 export * from './layout';
 export * from './seo';
@@ -6,4 +6,6 @@ export * from './sidebar';
 export * from './instagram-widget';
 export * from './hero-carousel';
 export * from './header-indicator';
-export * from './about-section';
+export * from './text-with-image';
+export * from './about';
+export * from './heading-with-text';

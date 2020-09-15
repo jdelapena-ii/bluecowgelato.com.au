@@ -25,16 +25,23 @@ function useGraphQL() {
             }
           }
         }
-        aboutHeroImage: file(relativePath: { eq: "about-hero.png" }) {
+        cartImage: file(relativePath: { eq: "cart5.png" }) {
           childImageSharp {
-            fluid(maxWidth: 1920, quality: 90) {
-              ...GatsbyImageSharpFluid_withWebp
+            fluid(maxWidth: 1920) {
+              ...GatsbyImageSharpFluid
             }
           }
         }
-        aboutSectionImage: file(relativePath: { eq: "hero2-cut.png" }) {
+        cakeImage: file(relativePath: { eq: "cake5.png" }) {
           childImageSharp {
             fluid(maxWidth: 1920) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        aboutHeroImage: file(relativePath: { eq: "about-hero.png" }) {
+          childImageSharp {
+            fluid(maxWidth: 1920, quality: 90) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
