@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
 
 import { Layout, SEO, InstagramWidget, TextWithImage } from '../components';
 import { Hero } from '../components/hero-carousel';
@@ -44,9 +45,12 @@ function CustomCakes({ bgColorClass }) {
       <div className="w-full max-w-4xl mx-auto space-y-4 sm:space-y-0 sm:space-x-12 sm:flex">
         <TextWithImage image={cakeImage.childImageSharp.fluid}>
           <div className="text-center">
-            <h1 className="font-bold text-center sm:text-6xl">Custom</h1>
-            <p className="sm:text-3xl font-dots">Gelato Cakes</p>
-            <p className="font-bold sm:text-1xl">Made to Order in Store</p>
+            <h1 className="font-bold text-center sm:text-7xl">Custom</h1>
+            <p className="sm:text-5xl font-dots">Gelato Cakes</p>
+            <p className="font-semibold sm:text-xl">Made to Order in Store</p>
+            <div>
+              <Link to="/">Enquire inside</Link>
+            </div>
           </div>
         </TextWithImage>
       </div>
