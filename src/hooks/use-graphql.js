@@ -32,6 +32,13 @@ function useGraphQL() {
             }
           }
         }
+        cakeImage: file(relativePath: { eq: "cake5.png" }) {
+          childImageSharp {
+            fluid(maxWidth: 1920) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         site {
           siteMetadata {
             title
