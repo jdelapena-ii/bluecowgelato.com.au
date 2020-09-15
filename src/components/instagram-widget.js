@@ -39,7 +39,7 @@ function InstagramWidget() {
                   src={feed.src}
                   alt={feed.caption}
                   srcSet={feed.srcSet.join(', ')}
-                  className="object-contain w-full h-full"
+                  className="absolute inset-0 object-contain w-full h-full"
                 />
                 <div
                   aria-hidden

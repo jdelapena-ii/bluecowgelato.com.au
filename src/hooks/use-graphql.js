@@ -36,6 +36,17 @@ function useGraphQL() {
           childImageSharp {
             fluid(maxWidth: 1920) {
               ...GatsbyImageSharpFluid
+        aboutHeroImage: file(relativePath: { eq: "about-hero.png" }) {
+          childImageSharp {
+            fluid(maxWidth: 1920, quality: 90) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+        aboutSectionImage: file(relativePath: { eq: "hero2-cut.png" }) {
+          childImageSharp {
+            fluid(maxWidth: 1920) {
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
@@ -59,7 +70,7 @@ function useGraphQL() {
             node {
               childImageSharp {
                 fluid(maxWidth: 1920, quality: 100) {
-                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                  ...GatsbyImageSharpFluid_withWebp
                 }
               }
             }
