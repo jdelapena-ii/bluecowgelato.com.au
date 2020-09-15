@@ -1,7 +1,7 @@
-import React, { useState, Fragment } from 'react';
+import React, { useState, Fragment, useEffect } from 'react';
 import { Link } from 'gatsby';
 
-import { useGraphQL } from '../hooks';
+import { useGraphQL, useSiteContext } from '../hooks';
 import { mainNavigation } from '../data';
 import { Logo } from './vectors';
 import { MobileMenu } from './mobile-menu';
@@ -11,18 +11,32 @@ function Header() {
     site: { siteMetadata },
   } = useGraphQL();
 
+  const { isHeaderActive } = useSiteContext();
+
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    console.log(isHeaderActive);
+  }, [isHeaderActive]);
+
   return (
-    <nav className="fixed inset-x-0 top-0 z-20 bg-transparent h-36">
+    <nav
+      className={`fixed inset-x-0 top-0 z-20 transition ease-in-out duration-300 ${
+        isHeaderActive ? 'bg-sky-blue shadow-md' : 'bg-transparent'
+      }`}
+    >
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="flex justify-between">
           <div className="flex items-center py-4">
             <Link
               to="/"
-              className="flex items-center flex-shrink-0 text-white transition duration-150 ease-in-out rounded-full hover:opacity-75 focus:opacity-75"
+              className="flex items-center flex-shrink-0 text-white transition duration-300 ease-in-out rounded-full hover:opacity-75 focus:opacity-75"
             >
-              <Logo className="fill-current h-28" />
+              <Logo
+                className={`fill-current transition-all ease-in-out duration-300 ${
+                  isHeaderActive ? ' h-20' : 'h-28'
+                }`}
+              />
             </Link>
           </div>
           <div className="hidden space-x-8 md:ml-6 md:flex">
