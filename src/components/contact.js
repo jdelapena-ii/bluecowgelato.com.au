@@ -4,13 +4,13 @@ import PropTypes from 'prop-types';
 
 import { NetlifyForm, Input, TextArea, Select } from './form-elements';
 
-function ContactForm({ bgColorClass }) {
+function Contact({ bgColorClass }) {
   const { register, handleSubmit, errors } = useForm({ mode: 'onBlur' });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   return (
     <article
-      className={`relative px-4 py-12 sm:px-6 lg:px-8 ${
+      className={`relative px-4 py-12 sm:px-6 md:px-8 ${
         bgColorClass || 'bg-slate'
       }`}
     >
@@ -91,7 +91,7 @@ function ContactForm({ bgColorClass }) {
   );
 }
 
-ContactForm.propTypes = {
+Contact.propTypes = {
   bgColorClass: PropTypes.string,
 };
-export { ContactForm };
+export { Contact };
