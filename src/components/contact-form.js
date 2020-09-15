@@ -1,14 +1,19 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import PropTypes from 'prop-types';
 
 import { NetlifyForm, Input, TextArea, Select } from './form-elements';
 
-function ContactForm() {
+function ContactForm({ bgColorClass }) {
   const { register, handleSubmit, errors } = useForm({ mode: 'onBlur' });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   return (
-    <article className="relative px-4 py-12 sm:px-6 lg:px-8">
+    <article
+      className={`relative px-4 py-12 sm:px-6 lg:px-8 ${
+        bgColorClass || 'bg-slate'
+      }`}
+    >
       <div className="relative w-full max-w-2xl mx-auto bg-white rounded-lg shadow-2xl">
         <div className="px-4 py-12 shadow-sm sm:px-6 lg:px-8">
           <h2 className="pb-8 text-3xl font-black tracking-wide text-center uppercase text-slate font-display">
@@ -86,4 +91,7 @@ function ContactForm() {
   );
 }
 
+ContactForm.propTypes = {
+  bgColorClass: PropTypes.string,
+};
 export { ContactForm };

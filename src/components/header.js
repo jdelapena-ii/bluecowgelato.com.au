@@ -11,7 +11,7 @@ function Header() {
     site: { siteMetadata },
   } = useGraphQL();
 
-  const { isHeaderActive, setIsHeaderActive } = useSiteContext();
+  const { isHeaderActive } = useSiteContext();
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -30,7 +30,7 @@ function Header() {
           <div className="flex items-center py-4">
             <Link
               to="/"
-              className="flex items-center flex-shrink-0 text-white transition duration-150 ease-in-out rounded-full hover:opacity-75 focus:opacity-75"
+              className="flex items-center flex-shrink-0 text-white transition duration-300 ease-in-out rounded-full hover:opacity-75 focus:opacity-75"
             >
               <Logo
                 className={`fill-current transition-all ease-in-out duration-300 ${
