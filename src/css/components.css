@@ -16,6 +16,10 @@ body,
   height: -webkit-fill-available;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Add a background colour so that when you overscroll (iOS and macOS) you can see the colour underneath */
 body {
   @apply bg-sky-blue;
