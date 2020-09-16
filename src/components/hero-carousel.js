@@ -4,9 +4,9 @@ import { Link } from 'gatsby';
 import GatsbyImage from 'gatsby-image';
 import { useKeenSlider } from 'keen-slider/react';
 
-import { useSlides } from '../../data/carousel-slides';
+import { useSlides } from '../data/carousel-slides';
 
-function Hero() {
+function HeroCarousel() {
   const [sliderRef, slider] = useKeenSlider({
     initial: 0,
     loop: true,
@@ -145,4 +145,4 @@ function ArrowDown() {
   );
 }
 
-export { Hero };
+export { HeroCarousel };
