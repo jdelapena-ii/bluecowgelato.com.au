@@ -15,14 +15,12 @@ function Select({
 }) {
   return (
     <div className={isFullWidth ? 'sm:col-span-2' : ''}>
-      <span className="block text-sm font-medium leading-5 text-gray-700">
-        {required}
-      </span>
+      <span className="sr-only">{label}</span>
       <div className="relative mt-1 shadow-sm">
         <select
           id={name}
           name={name}
-          defaultValue=""
+          defaultValue={label || defaultValue}
           required={required}
           aria-invalid={!!errors[name]}
           ref={register({
@@ -30,13 +28,13 @@ function Select({
               <Error message={`${label} is a required field`} />
             ),
           })}
-          className="block w-full px-4 py-2 transition duration-150 ease-in-out rounded-lg form-select"
+          className={`block w-full px-4 py-2 transition duration-150 ease-in-out rounded-lg form-select ${
+            errors[name]?.message ? 'border-red-300' : 'border-gray-300'
+          }`}
         >
-          {defaultValue !== '' && (
-            <option value="" disabled>
-              {defaultValue}
-            </option>
-          )}
+          <option value={label || defaultValue} disabled>
+            {label || defaultValue}
+          </option>
           {options.map((option) => (
             <option key={option} value={option}>
               {option}

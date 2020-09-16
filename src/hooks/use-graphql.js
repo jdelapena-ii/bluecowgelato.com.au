@@ -72,6 +72,40 @@ function useGraphQL() {
             }
           }
         }
+        cakesRequest: allFile(
+          filter: {
+            extension: { regex: "/(jpg)|(png)|(tif)|(tiff)|(webp)|(jpeg)/" }
+            relativeDirectory: { eq: "cakes-request" }
+          }
+        ) {
+          edges {
+            node {
+              childImageSharp {
+                id
+                fluid(maxWidth: 500, quality: 100) {
+                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                }
+              }
+            }
+          }
+        }
+        cakesRequest: allFile(
+          filter: {
+            extension: { regex: "/(jpg)|(png)|(tif)|(tiff)|(webp)|(jpeg)/" }
+            relativeDirectory: { eq: "cakes-request" }
+          }
+        ) {
+          edges {
+            node {
+              childImageSharp {
+                id
+                fluid(maxWidth: 500, quality: 100) {
+                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                }
+              }
+            }
+          }
+        }
       }
     `
   );

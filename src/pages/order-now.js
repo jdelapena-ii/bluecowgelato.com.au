@@ -1,14 +1,25 @@
 import React from 'react';
 
-import { Layout, SEO } from '../components';
+import {
+  Layout,
+  SEO,
+  CakesRequest,
+  RequestForm,
+  HeadingCTA,
+  InstagramWidget,
+} from '../components';
 
 function OrderNowPage() {
   return (
     <Layout>
       <SEO title="Order Now" />
-      <h1 className="py-48 text-5xl font-black text-center text-slate font-display">
-        Order Now
-      </h1>
+      <HeadingCTA
+        subHeading="Gelato Cakes"
+        message="Gelato cakes are perfect for your occasion and celebrations. Please order now!"
+      />
+      <CakesRequest />
+      <RequestForm />
+      <InstagramWidget />
     </Layout>
   );
 }
