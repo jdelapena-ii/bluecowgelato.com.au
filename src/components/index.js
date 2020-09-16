@@ -1,5 +1,5 @@
 export * from './about';
-export * from './business-logo';
+export * from './business-logos';
 export * from './cakes-request';
 export * from './contact';
 export * from './header-indicator';

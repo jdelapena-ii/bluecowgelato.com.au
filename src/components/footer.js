@@ -1,14 +1,13 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import { BusinessLogo } from './business-logo';
+import { BusinessLogos } from './business-logos';
 import { Logo } from './vectors';
 
 function Footer() {
   return (
     <footer className="bg-slate">
-      <BusinessLogo />
-
+      <BusinessLogos />
       <div className="max-w-screen-xl px-4 py-6 pb-12 mx-auto overflow-hidden sm:px-6 lg:px-8">
         <div className="flex justify-center py-4">
           <Link
