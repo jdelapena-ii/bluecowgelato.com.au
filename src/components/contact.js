@@ -16,7 +16,7 @@ function Contact({ bgColorClass }) {
     >
       <div className="relative w-full max-w-2xl mx-auto bg-white rounded-lg shadow-2xl">
         <div className="px-4 py-12 shadow-sm sm:px-6 lg:px-8">
-          <h2 className="pb-8 text-3xl font-black tracking-wide text-center uppercase text-slate font-display">
+          <h2 className="pb-8 text-3xl font-normal tracking-wide text-center uppercase text-slate font-display">
             Get in touch with our team
           </h2>
           <NetlifyForm
