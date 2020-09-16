@@ -57,6 +57,7 @@
     "react-spring": "^8.0.27",
     "tailwindcss": "^1.8.3",
     "tailwindcss-aspect-ratio": "^3.0.0",
+    "tailwindcss-filters": "^3.0.0",
     "typeface-montserrat": "^0.0.75"
   },
   "scripts": {

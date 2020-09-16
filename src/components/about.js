@@ -20,7 +20,7 @@ function About({ children, classNames }) {
       </div>
 
       <div className="relative w-full max-w-xl mx-auto md:max-w-7xl sm:px-6 lg:px-8">
-        <div className="p-8 bg-white bg-opacity-75 rounded-lg md:p-12 md:max-w-md">
+        <div className="p-8 overflow-hidden bg-white bg-opacity-50 rounded-lg backdrop-blur md:p-12 md:max-w-md">
           {children}
         </div>
       </div>
