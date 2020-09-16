@@ -21,10 +21,17 @@ const siteUrl = 'https://www.bluecowgelato.com.au';
 module.exports = {
   siteMetadata: {
     title,
-    description: '',
+    description:
+      'Delicious freshly made gelato and sorbet, custom gelato cakes, sundaes, shakes, brownies, and local Doppio coffee made on site.',
     author: '',
     siteUrl,
     phone: '0491 060 099',
+    email: 'bluecowgelato@gmail.com',
+    address: {
+      line1: '1/72 Clarence Street',
+      line2: 'Port Macquarie',
+      googleMaps: 'https://goo.gl/maps/Xgic2nCnqNeL9z888',
+    },
     social: {
       facebook: 'https://www.facebook.com/bluecowgelato/',
       instagram: 'https://www.instagram.com/bluecowgelato/',

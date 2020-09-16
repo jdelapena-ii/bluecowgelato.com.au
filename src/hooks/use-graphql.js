@@ -18,11 +18,20 @@ function useGraphQL() {
   const data = useStaticQuery(
     graphql`
       {
-        placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
-          childImageSharp {
-            fluid(maxWidth: 300) {
-              ...GatsbyImageSharpFluid
+        site {
+          siteMetadata {
+            address {
+              line1
+              line2
+              googleMaps
             }
+            email
+            title
+            social {
+              facebook
+              instagram
+            }
+            phone
           }
         }
         cartImage: file(relativePath: { eq: "cart5.png" }) {
@@ -44,16 +53,6 @@ function useGraphQL() {
             fluid(maxWidth: 1920, quality: 90) {
               ...GatsbyImageSharpFluid_withWebp
             }
-          }
-        }
-        site {
-          siteMetadata {
-            title
-            social {
-              facebook
-              instagram
-            }
-            phone
           }
         }
         homeCarouselImages: allFile(
