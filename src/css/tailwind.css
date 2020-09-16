@@ -3,8 +3,7 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "./components.css";
-/*! purgecss end ignore */
-/* Keen Slider */
 @import "keen-slider/keen-slider.min.css";
+/*! purgecss end ignore */
 @import "tailwindcss/utilities";
 @import "./utilities.css";

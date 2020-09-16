@@ -34,6 +34,21 @@ function useGraphQL() {
             phone
           }
         }
+        allCarouselSlidesJson {
+          nodes {
+            id
+            image {
+              childImageSharp {
+                fluid(maxWidth: 1920, quality: 90) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
+            subTitle
+            title
+            url
+          }
+        }
         cartImage: file(relativePath: { eq: "cart5.png" }) {
           childImageSharp {
             fluid(maxWidth: 1920) {
@@ -55,22 +70,6 @@ function useGraphQL() {
             }
           }
         }
-        homeCarouselImages: allFile(
-          filter: {
-            extension: { regex: "/(jpg)|(png)|(tif)|(tiff)|(webp)|(jpeg)/" }
-            relativeDirectory: { eq: "home-carousel" }
-          }
-        ) {
-          edges {
-            node {
-              childImageSharp {
-                fluid(maxWidth: 1920, quality: 100) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
-              }
-            }
-          }
-        }
         cakesRequest: allFile(
           filter: {
             extension: { regex: "/(jpg)|(png)|(tif)|(tiff)|(webp)|(jpeg)/" }
@@ -81,24 +80,7 @@ function useGraphQL() {
             node {
               childImageSharp {
                 id
-                fluid(maxWidth: 500, quality: 100) {
-                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
-                }
-              }
-            }
-          }
-        }
-        cakesRequest: allFile(
-          filter: {
-            extension: { regex: "/(jpg)|(png)|(tif)|(tiff)|(webp)|(jpeg)/" }
-            relativeDirectory: { eq: "cakes-request" }
-          }
-        ) {
-          edges {
-            node {
-              childImageSharp {
-                id
-                fluid(maxWidth: 500, quality: 100) {
+                fluid(maxWidth: 500, quality: 90) {
                   ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
               }
