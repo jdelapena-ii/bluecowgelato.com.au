@@ -16,7 +16,7 @@ function InstagramWidget() {
           <BannerIcon
             aria-hidden
             focusable={false}
-            className="absolute text-sky-blue"
+            className="absolute inset-y-0 h-full text-sky-blue"
           />
           <a
             href={siteMetadata.social.instagram}
