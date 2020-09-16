@@ -1,4 +1,5 @@
 import React from 'react';
+import { nanoid } from 'nanoid';
 
 import {
   LUSCLogo,
@@ -9,19 +10,19 @@ import {
 
 const business = [
   {
-    id: '1',
+    id: nanoid(),
     icon: PizzaObsessionLogo,
   },
   {
-    id: '2',
+    id: nanoid(),
     icon: HiddenGemLogo,
   },
   {
-    id: '3',
+    id: nanoid(),
     icon: SixtyThreeFirstAvenueLogo,
   },
   {
-    id: '4',
+    id: nanoid(),
     icon: LUSCLogo,
   },
 ];

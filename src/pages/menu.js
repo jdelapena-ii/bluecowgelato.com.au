@@ -1,14 +1,14 @@
 import React from 'react';
 
-import { Layout, SEO } from '../components';
+import { Layout, SEO, Menu, LandingMenu } from '../components';
 
 function MenuPage() {
   return (
     <Layout>
       <SEO title="Menu" />
-      <h1 className="py-48 text-5xl font-black text-center text-slate font-display">
-        Menu
-      </h1>
+      <div aria-hidden className="pt-48 bg-gold" />
+      <LandingMenu />
+      <Menu />
     </Layout>
   );
 }

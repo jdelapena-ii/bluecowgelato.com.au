@@ -1,3 +1,4 @@
+export * from './banner-icon';
 export * from './back-to-top-icon';
 export * from './cake-icon';
 export * from './coffee-icon';
