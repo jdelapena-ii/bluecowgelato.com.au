@@ -10,22 +10,22 @@ function InstagramWidget() {
   const instagramFeed = useInstagram();
 
   return (
-    <div className="px-4 mx-auto overflow-hidden bg-white sm:px-6 lg:px-8">
-      <div className="py-8 pb-16 mx-auto space-y-16 max-w-7xl">
-        <div className="relative my-10">
-          <div className="absolute inset-0 flex">
-            <BannerIcon className="flex-1 text-sky-blue h-22" />
-          </div>
+    <div className="px-4 bg-white sm:px-6 lg:px-8">
+      <div className="py-16 mx-auto space-y-16 max-w-7xl">
+        <div className="relative flex items-center justify-center w-full max-w-3xl py-2 mx-auto">
+          <BannerIcon
+            aria-hidden
+            focusable={false}
+            className="absolute text-sky-blue"
+          />
           <a
             href={siteMetadata.social.instagram}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <div className="relative inset-0 flex items-center justify-center py-4 ">
-              <h2 className="text-4xl font-bold text-white uppercase lg:text-6xl md:text-5xl font-display">
-                #bluecowgelato
-              </h2>
-            </div>
+            <h2 className="relative text-3xl font-bold text-center text-white uppercase font-display sm:text-4xl md:text-5xl lg:text-6xl">
+              #bluecowgelato
+            </h2>
           </a>
         </div>
         <div className="grid grid-cols-2 col-span-3 gap-4 md:grid-cols-3 lg:grid-cols-5">

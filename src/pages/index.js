@@ -6,10 +6,12 @@ import {
   SEO,
   HeroCarousel,
   HeadingWithText,
+  LandingMenu,
   About,
   TextWithImage,
   Contact,
   InstagramWidget,
+  BusinessLogos,
 } from '../components';
 
 import { useGraphQL } from '../hooks';
@@ -20,11 +22,13 @@ function IndexPage() {
       <SEO title="Home" />
       <HeroCarousel />
       <ArtisanStyleGelato />
+      <LandingMenu />
       <CustomCakes />
       <AboutSection />
       <GelatoCart />
       <Contact bgColorClass="bg-gold" />
       <InstagramWidget />
+      <BusinessLogos />
     </Layout>
   );
 }
