@@ -42,7 +42,7 @@ function LandingMenu() {
           <BannerIcon
             aria-hidden
             focusable={false}
-            className="absolute inset-y-0 h-full text-sky-slate"
+            className="absolute inset-y-0 h-full text-slate"
           />
 
           <h2 className="relative text-3xl font-black text-center text-white uppercase font-dots sm:text-4xl md:text-5xl lg:text-6xl">
