@@ -5,7 +5,7 @@ import GatsbyImage from 'gatsby-image';
 import { useKeenSlider } from 'keen-slider/react';
 
 import { useGraphQL } from '../hooks';
-import { BannerIcon } from './vectors';
+import { Banner } from './banner';
 
 function HeroCarousel() {
   const [sliderRef, slider] = useKeenSlider({
@@ -36,17 +36,7 @@ function HeroCarousel() {
                       <h2 className="text-3xl text-white md:text-5xl font-display">
                         {slide.title}
                       </h2>
-                      <div className="relative flex items-center justify-center w-full max-w-3xl py-2 mx-auto mt-2">
-                        <BannerIcon
-                          aria-hidden
-                          focusable={false}
-                          className="absolute inset-y-0 h-full text-sky-blue"
-                        />
-
-                        <h2 className="relative text-3xl font-black text-center text-white uppercase font-dots sm:text-4xl md:text-5xl lg:text-6xl">
-                          {slide.subTitle}
-                        </h2>
-                      </div>
+                      <Banner bannerColor="sky-blue" heading={slide.subTitle} />
                       <Link
                         to="/"
                         className="inline-block px-4 mt-8 text-2xl font-bold tracking-wide uppercase transition-all duration-300 ease-in-out transform bg-white rounded-md md:text-4xl md:mt-20 text-slate font-display hover:text-white hover:bg-slate hover:scale-90"
