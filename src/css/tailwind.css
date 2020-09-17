@@ -2,8 +2,9 @@
 @import "./fonts.css";
 @import "tailwindcss/base";
 @import "tailwindcss/components";
-@import "./components.css";
+@import "@reach/tabs/styles.css";
 @import "keen-slider/keen-slider.min.css";
+@import "./components.css";
 /*! purgecss end ignore */
 @import "tailwindcss/utilities";
 @import "./utilities.css";

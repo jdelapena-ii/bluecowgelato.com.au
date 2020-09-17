@@ -35,3 +35,17 @@ button:focus {
 ::selection {
   @apply text-white bg-slate;
 }
+
+/*
+ * Override styles for @reach/tabs
+ */
+
+/* Reset border */
+[data-reach-tab-list].divide-y > * + * {
+  @apply border-t border-gray-300 border-solid;
+}
+
+/* Remove border-bottom on active tab */
+[data-reach-tab][data-selected] {
+  @apply border-b-0 border-gray-300 border-solid;
+}

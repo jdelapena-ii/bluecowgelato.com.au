@@ -1,76 +1,309 @@
 [
   {
-    "id": "2f886b1e-7328-4ce9-96f5-8e51f291afca",
-    "category": "scoops",
-    "order": [
+    "name": "Gelato &amp; Sorbets",
+    "categories": [
       {
-        "name": "1 flavour scoop",
-        "price": 4.9
+        "category": "Scoops",
+        "order": [
+          {
+            "name": "1 flavour scoop",
+            "price": 4.9
+          },
+          {
+            "name": "1 flavour scoop",
+            "price": 4.9
+          },
+          {
+            "name": "1 flavour scoop",
+            "price": 4.9
+          },
+          {
+            "name": "1 flavour scoop",
+            "price": 4.9
+          }
+        ]
       },
       {
-        "name": "1 flavour scoop",
-        "price": 4.9
+        "category": "Cones",
+        "order": [
+          {
+            "name": "Waffle cone",
+            "price": 0.30
+          },
+          {
+            "name": "Waffle cone",
+            "price": 0.30
+          },
+          {
+            "name": "Waffle cone",
+            "price": 0.30
+          },
+          {
+            "name": "Waffle cone",
+            "price": 0.30
+          }
+        ]
       },
       {
-        "name": "1 flavour scoop",
-        "price": 4.9
+        "category": "Take home packs",
+        "order": [
+          {
+            "name": "Small 500ml 2 flavours",
+            "price": 13
+          },
+          {
+            "name": "Small 500ml 2 flavours",
+            "price": 22
+          }
+        ]
       },
       {
-        "name": "1 flavour scoop",
-        "price": 4.9
+        "category": "Extra toppers",
+        "order": [
+          {
+            "name": "1 flavour scoop",
+            "price": 4.9
+          },
+          {
+            "name": "1 flavour scoop",
+            "price": 4.9
+          },
+          {
+            "name": "1 flavour scoop",
+            "price": 4.9
+          }
+        ]
       }
     ]
   },
   {
-    "id": "7cddb656-cf71-49ec-8edc-08c69fbc7d53",
-    "category": "cones",
-    "order": [
+    "name": "Cakes",
+    "categories": [
       {
-        "name": "Waffle cone",
-        "price": 0.30
-      },{
-        "name": "Waffle cone",
-        "price": 0.30
+        "category": "Scoops",
+        "order": [
+          {
+            "name": "1 flavour scoop",
+            "price": 4.9
+          },
+          {
+            "name": "1 flavour scoop",
+            "price": 4.9
+          },
+          {
+            "name": "1 flavour scoop",
+            "price": 4.9
+          },
+          {
+            "name": "1 flavour scoop",
+            "price": 4.9
+          }
+        ]
       },
       {
-        "name": "Waffle cone",
-        "price": 0.30
+        "category": "Cones",
+        "order": [
+          {
+            "name": "Waffle cone",
+            "price": 0.30
+          },
+          {
+            "name": "Waffle cone",
+            "price": 0.30
+          },
+          {
+            "name": "Waffle cone",
+            "price": 0.30
+          },
+          {
+            "name": "Waffle cone",
+            "price": 0.30
+          }
+        ]
       },
       {
-        "name": "Waffle cone",
-        "price": 0.30
+        "category": "Take home packs",
+        "order": [
+          {
+            "name": "Small 500ml 2 flavours",
+            "price": 13
+          },
+          {
+            "name": "Small 500ml 2 flavours",
+            "price": 22
+          }
+        ]
+      },
+      {
+        "category": "Extra toppers",
+        "order": [
+          {
+            "name": "1 flavour scoop",
+            "price": 4.9
+          },
+          {
+            "name": "1 flavour scoop",
+            "price": 4.9
+          },
+          {
+            "name": "1 flavour scoop",
+            "price": 4.9
+          }
+        ]
       }
     ]
   },
   {
-    "id": "4751a03c-9cf7-4690-ae8d-056db26211f2",
-    "category": "take home packs",
-    "order": [
+    "name": "Waffles",
+    "categories": [
       {
-        "name": "Small 500ml 2 flavours",
-        "price": 13
+        "category": "Scoops",
+        "order": [
+          {
+            "name": "1 flavour scoop",
+            "price": 4.9
+          },
+          {
+            "name": "1 flavour scoop",
+            "price": 4.9
+          },
+          {
+            "name": "1 flavour scoop",
+            "price": 4.9
+          },
+          {
+            "name": "1 flavour scoop",
+            "price": 4.9
+          }
+        ]
       },
       {
-        "name": "Small 500ml 2 flavours",
-        "price": 22
+        "category": "Cones",
+        "order": [
+          {
+            "name": "Waffle cone",
+            "price": 0.30
+          },
+          {
+            "name": "Waffle cone",
+            "price": 0.30
+          },
+          {
+            "name": "Waffle cone",
+            "price": 0.30
+          },
+          {
+            "name": "Waffle cone",
+            "price": 0.30
+          }
+        ]
+      },
+      {
+        "category": "Take home packs",
+        "order": [
+          {
+            "name": "Small 500ml 2 flavours",
+            "price": 13
+          },
+          {
+            "name": "Small 500ml 2 flavours",
+            "price": 22
+          }
+        ]
+      },
+      {
+        "category": "Extra toppers",
+        "order": [
+          {
+            "name": "1 flavour scoop",
+            "price": 4.9
+          },
+          {
+            "name": "1 flavour scoop",
+            "price": 4.9
+          },
+          {
+            "name": "1 flavour scoop",
+            "price": 4.9
+          }
+        ]
       }
     ]
   },
   {
-    "id": "45bf2d2c-c7c2-4766-b86d-65b68f08d3f2",
-    "category": "extra toppers",
-    "order": [
+    "name": "Doppio Coffee",
+    "categories": [
       {
-        "name": "1 flavour scoop",
-        "price": 4.9
+        "category": "Scoops",
+        "order": [
+          {
+            "name": "1 flavour scoop",
+            "price": 4.9
+          },
+          {
+            "name": "1 flavour scoop",
+            "price": 4.9
+          },
+          {
+            "name": "1 flavour scoop",
+            "price": 4.9
+          },
+          {
+            "name": "1 flavour scoop",
+            "price": 4.9
+          }
+        ]
       },
       {
-        "name": "1 flavour scoop",
-        "price": 4.9
+        "category": "Cones",
+        "order": [
+          {
+            "name": "Waffle cone",
+            "price": 0.30
+          },
+          {
+            "name": "Waffle cone",
+            "price": 0.30
+          },
+          {
+            "name": "Waffle cone",
+            "price": 0.30
+          },
+          {
+            "name": "Waffle cone",
+            "price": 0.30
+          }
+        ]
       },
       {
-        "name": "1 flavour scoop",
-        "price": 4.9
+        "category": "Take home packs",
+        "order": [
+          {
+            "name": "Small 500ml 2 flavours",
+            "price": 13
+          },
+          {
+            "name": "Small 500ml 2 flavours",
+            "price": 22
+          }
+        ]
+      },
+      {
+        "category": "Extra toppers",
+        "order": [
+          {
+            "name": "1 flavour scoop",
+            "price": 4.9
+          },
+          {
+            "name": "1 flavour scoop",
+            "price": 4.9
+          },
+          {
+            "name": "1 flavour scoop",
+            "price": 4.9
+          }
+        ]
       }
     ]
   }
