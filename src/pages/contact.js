@@ -1,6 +1,13 @@
 import React from 'react';
 
-import { Layout, SEO, Contact, HeadingCTA } from '../components';
+import {
+  Layout,
+  SEO,
+  Contact,
+  HeadingCTA,
+  InstagramWidget,
+  BusinessLogos,
+} from '../components';
 
 function ContactPage() {
   return (
@@ -12,7 +19,9 @@ function ContactPage() {
       laboriosam dignissimos quam earum placeat, ullam sint nesciunt
       possimus eaque."
       />
-      <Contact />
+      <Contact bgColorClass="bg-sky-blue" />
+      <InstagramWidget />
+      <BusinessLogos />
     </Layout>
   );
 }
