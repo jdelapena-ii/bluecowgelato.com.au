@@ -73,7 +73,7 @@ function RequestForm() {
                 label="Flavour 1"
                 options={[
                   'Chocolate',
-                  'Cookies and cream',
+                  'Cookies and Cream',
                   'Mint Choc Chip',
                   'Burnt Caramel',
                   'Snickers',
@@ -94,7 +94,7 @@ function RequestForm() {
                 label="Flavour 2"
                 options={[
                   'Chocolate',
-                  'Cookies and cream',
+                  'Cookies and Cream',
                   'Mint Choc Chip',
                   'Burnt Caramel',
                   'Snickers',
