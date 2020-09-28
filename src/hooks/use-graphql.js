@@ -49,14 +49,14 @@ function useGraphQL() {
             url
           }
         }
-        cartImage: file(relativePath: { eq: "cart5.png" }) {
+        cartImage: file(relativePath: { eq: "gelato-cart.png" }) {
           childImageSharp {
             fluid(maxWidth: 1920) {
               ...GatsbyImageSharpFluid
             }
           }
         }
-        cakeImage: file(relativePath: { eq: "cake5.png" }) {
+        cakeImage: file(relativePath: { eq: "custom-cakes.png" }) {
           childImageSharp {
             fluid(maxWidth: 1920) {
               ...GatsbyImageSharpFluid
@@ -72,7 +72,7 @@ function useGraphQL() {
         }
         cakesRequest: allFile(
           filter: {
-            extension: { regex: "/(jpg)|(png)|(tif)|(tiff)|(webp)|(jpeg)/" }
+            extension: { regex: "/(jpg)|(png)/" }
             relativeDirectory: { eq: "cakes-request" }
           }
         ) {
