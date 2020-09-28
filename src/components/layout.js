@@ -11,7 +11,6 @@ import PropTypes from 'prop-types';
 import { Header } from './header';
 import { HeaderIndicator } from './header-indicator';
 import { Footer } from './footer';
-import { BackToTop } from './back-to-top';
 
 function Layout({ children }) {
   return (
@@ -22,7 +21,6 @@ function Layout({ children }) {
         {children}
       </main>
       <Footer />
-      <BackToTop />
     </div>
   );
 }
