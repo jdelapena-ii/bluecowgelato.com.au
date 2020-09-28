@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import { nanoid } from 'nanoid';
 
 import {
@@ -50,14 +51,13 @@ function LandingMenu() {
             </div>
           ))}
         </div>
-        {/* TODO: Link or button */}
         <div className="flex justify-center mt-32 lg:my-16">
-          <button
-            type="button"
+          <Link
+            to="/menu/"
             className="px-6 py-2 mx-auto text-xl text-white uppercase rounded-md bg-slate font-dots"
           >
             Want more? click here
-          </button>
+          </Link>
         </div>
       </div>
     </article>
