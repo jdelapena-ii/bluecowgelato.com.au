@@ -33,7 +33,7 @@ function HeroCarousel() {
                   </div>
                   <div className="absolute inset-0 flex items-center justify-center">
                     <ul className="text-center">
-                      <h2 className="text-3xl text-white md:text-5xl font-display">
+                      <h2 className="text-3xl text-white md:text-5xl font-display text-shadow">
                         {slide.title}
                       </h2>
                       <Banner bannerColor="sky-blue" heading={slide.subTitle} />
