@@ -12,7 +12,7 @@ function Banner({ heading, bannerColor, slug }) {
   };
   function Heading() {
     return (
-      <h2 className="relative px-2 py-2 text-3xl font-black text-center text-white uppercase font-dots sm:text-4xl md:text-5xl lg:text-6xl">
+      <h2 className="relative px-2 py-3 text-3xl font-black text-center text-white uppercase font-dots sm:text-4xl md:text-5xl lg:text-6xl">
         {heading}
       </h2>
     );
