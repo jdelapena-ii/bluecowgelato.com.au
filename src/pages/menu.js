@@ -11,7 +11,7 @@ import {
 
 function MenuPage() {
   return (
-    <Layout>
+    <Layout headerBgColorClass="bg-slate">
       <SEO title="Menu" />
       <div aria-hidden className="pt-48 bg-slate" />
       <Menu />
