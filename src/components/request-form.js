@@ -39,7 +39,6 @@ function RequestForm() {
                 name="email"
                 label="Email address"
                 type="email"
-                isFullWidth
                 register={register}
                 errors={errors}
               />
@@ -47,28 +46,24 @@ function RequestForm() {
                 name="contact_number"
                 label="Contact number"
                 type="tel"
-                isFullWidth
                 register={register}
                 errors={errors}
               />
               <Input
                 name="date_pickup"
                 label="Date of pick up (please allow at least 2 days notice)"
-                isFullWidth
                 register={register}
                 errors={errors}
               />
               <Input
                 name="pickup_date"
                 label="Approximate time of pick up"
-                isFullWidth
                 register={register}
                 errors={errors}
               />
               <Input
                 name="allergies_dietary"
                 label="Allergies / dietary requirements"
-                isFullWidth
                 register={register}
                 errors={errors}
               />
@@ -90,7 +85,6 @@ function RequestForm() {
                   'Lemon Sorbet',
                   'Strawberry Sorbet',
                 ]}
-                isFullWidth
                 register={register}
                 errors={errors}
               />
@@ -112,7 +106,6 @@ function RequestForm() {
                   'Lemon Sorbet',
                   'Strawberry Sorbet',
                 ]}
-                isFullWidth
                 register={register}
                 errors={errors}
               />
@@ -125,7 +118,6 @@ function RequestForm() {
                   'Medium - 9L - Approximately 12 people - $55',
                   'Large - 2.4L - Approximately 18 people - $65',
                 ]}
-                isFullWidth
                 register={register}
                 errors={errors}
               />
@@ -141,7 +133,6 @@ function RequestForm() {
                   'Fruit Frenzy - add $2',
                   'The Butterfly - add $2',
                 ]}
-                isFullWidth
                 register={register}
                 errors={errors}
               />
@@ -150,6 +141,7 @@ function RequestForm() {
                 label="Custom Order Inquiry (Optional)"
                 register={register}
                 errors={errors}
+                required={false}
               />
               <div className="py-8 text-sm break-words">
                 <p>Vegan cakes allow for only one flavor.</p>
@@ -160,8 +152,7 @@ function RequestForm() {
                 <p>Prices may vary depending on request.</p>
                 <p>Bringing a cool bag is recommended for pick up.</p>
               </div>
-              <div className="flex justify-between">
-                <p>*All fields required</p>
+              <div className="flex justify-end">
                 <span className="inline-flex shadow-sm">
                   <button
                     type="submit"

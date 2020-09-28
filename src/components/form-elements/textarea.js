@@ -24,7 +24,9 @@ function TextArea({
             placeholder={label}
             aria-invalid={!!errors[name]}
             ref={register({
-              required: <Error message={`${label} is a required field`} />,
+              required: required && (
+                <Error message={`${label} is a required field`} />
+              ),
             })}
             className={`block w-full px-4 py-2 transition duration-150 ease-in-out rounded-lg form-textarea ${
               errors[name]?.message ? 'border-red-300' : 'border-gray-300'
