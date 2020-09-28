@@ -43,7 +43,6 @@ function Contact({ bgColorClass }) {
               name="email"
               label="Email Address"
               type="email"
-              isFullWidth
               register={register}
               errors={errors}
             />
@@ -51,16 +50,12 @@ function Contact({ bgColorClass }) {
               name="contact_number"
               label="Contact number"
               type="tel"
-              isFullWidth
               register={register}
               errors={errors}
             />
-            <Select
+            <Input
               name="subject"
               label="Subject"
-              defaultValue="Subject (Please select one)"
-              options={['Option 01', 'Option 02', 'Option 03', 'Option 04']}
-              isFullWidth
               register={register}
               errors={errors}
             />

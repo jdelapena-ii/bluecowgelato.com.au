@@ -6,7 +6,6 @@ import { Error } from './error';
 function Select({
   defaultValue = '',
   errors,
-  isFullWidth,
   label,
   name,
   options = [],
@@ -14,7 +13,7 @@ function Select({
   required = true,
 }) {
   return (
-    <div className={isFullWidth ? 'sm:col-span-2' : ''}>
+    <div>
       <span className="sr-only">{label}</span>
       <div className="relative mt-1 shadow-sm">
         <select
@@ -50,7 +49,6 @@ function Select({
 Select.propTypes = {
   defaultValue: PropTypes.string,
   errors: PropTypes.object,
-  isFullWidth: PropTypes.bool,
   label: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   options: PropTypes.array.isRequired,

@@ -4,7 +4,6 @@ import React from 'react';
 import { Error } from './error';
 
 function Input({
-  isFullWidth,
   label,
   name,
   placeholder,
@@ -15,7 +14,7 @@ function Input({
 }) {
   const MIN_LENGTH = type === 'tel' ? 8 : 2;
   return (
-    <div className={isFullWidth ? 'sm:col-span-2' : ''}>
+    <div>
       <label htmlFor={name}>
         <span
           className={
@@ -58,7 +57,6 @@ function Input({
 
 Input.propTypes = {
   errors: PropTypes.object,
-  isFullWidth: PropTypes.bool,
   label: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   placeholder: PropTypes.string,
