@@ -62,7 +62,9 @@ function Header({ bgColorClass }) {
             <a
               href={`tel:${siteMetadata.phone.split(' ').join('')}`}
               aria-label={`Phone: ${siteMetadata.phone}`}
-              className="inline-flex items-center p-2 my-auto text-white rounded-full font-display bg-sky-blue"
+              className={`inline-flex items-center p-2 my-auto text-white transition duration-150 ease-in-out rounded-full font-display ${
+                isHeaderActive ? 'bg-gold' : 'bg-sky-blue'
+              }`}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
