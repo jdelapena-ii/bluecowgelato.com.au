@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import PropTypes from 'prop-types';
 
-import { NetlifyForm, Input, TextArea, Select } from './form-elements';
+import { NetlifyForm, Input, TextArea } from './form-elements';
 
 function Contact({ bgColorClass }) {
   const { register, handleSubmit, errors } = useForm({ mode: 'onBlur' });
