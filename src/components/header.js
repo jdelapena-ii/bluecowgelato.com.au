@@ -33,7 +33,7 @@ function Header() {
               className="flex items-center flex-shrink-0 text-white transition duration-300 ease-in-out rounded-full hover:opacity-75 focus:opacity-75"
             >
               <Logo
-                className={`fill-current transition-all ease-in-out duration-300 ${
+                className={`fill-current transition-all ease-in-out duration-300 drop-shadow ${
                   isHeaderActive ? ' h-20' : 'h-28'
                 }`}
               />
