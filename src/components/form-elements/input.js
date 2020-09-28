@@ -16,22 +16,14 @@ function Input({
   return (
     <div>
       <label htmlFor={name}>
-        <span
-          className={
-            placeholder
-              ? 'block text-sm font-medium leading-5 text-gray-700'
-              : 'sr-only'
-          }
-        >
-          {label}
-        </span>
+        <span className="sr-only">{`${label}${required ? ' *' : ''}`}</span>
         <div className="relative mt-1 shadow-sm">
           <input
             id={name}
             name={name}
             type={type}
             required={required}
-            placeholder={placeholder || label}
+            placeholder={`${placeholder || label}${required ? ' *' : ''}`}
             aria-invalid={!!errors[name]}
             ref={register({
               required: required && <Error message="This field is required" />,

@@ -66,6 +66,7 @@ function RequestForm() {
                 label="Allergies / dietary requirements"
                 register={register}
                 errors={errors}
+                required={false}
               />
               <Select
                 name="flavour_1"
@@ -152,7 +153,8 @@ function RequestForm() {
                 <p>Prices may vary depending on request.</p>
                 <p>Bringing a cool bag is recommended for pick up.</p>
               </div>
-              <div className="flex justify-end">
+              <div className="flex justify-between">
+                <p>* Required field</p>
                 <span className="inline-flex shadow-sm">
                   <button
                     type="submit"

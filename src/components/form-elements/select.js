@@ -14,7 +14,7 @@ function Select({
 }) {
   return (
     <div>
-      <span className="sr-only">{label}</span>
+      <span className="sr-only">{`${label}${required ? ' *' : ''}`}</span>
       <div className="relative mt-1 shadow-sm">
         <select
           id={name}
@@ -32,7 +32,7 @@ function Select({
           }`}
         >
           <option value={label || defaultValue} disabled>
-            {label || defaultValue}
+            {`${label || defaultValue}${required ? ' *' : ''}`}
           </option>
           {options.map((option) => (
             <option key={option} value={option}>

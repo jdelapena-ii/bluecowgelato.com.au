@@ -4,24 +4,25 @@ import React from 'react';
 import { Error } from './error';
 
 function TextArea({
+  errors,
   label,
   name,
+  placeholder,
+  register,
   required = true,
   rows = 4,
-  register,
-  errors,
 }) {
   return (
     <div>
       <label htmlFor={name}>
-        <span className="sr-only">{label}</span>
+        <span className="sr-only">{`${label}${required ? ' *' : ''}`}</span>
         <div className="relative mt-1 shadow-sm">
           <textarea
             id={name}
             name={name}
             rows={rows}
             required={required}
-            placeholder={label}
+            placeholder={`${placeholder || label}${required ? ' *' : ''}`}
             aria-invalid={!!errors[name]}
             ref={register({
               required: required && (
@@ -43,6 +44,7 @@ TextArea.propTypes = {
   errors: PropTypes.object,
   label: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
+  placeholder: PropTypes.string,
   register: PropTypes.func.isRequired,
   required: PropTypes.bool,
   rows: PropTypes.number,
