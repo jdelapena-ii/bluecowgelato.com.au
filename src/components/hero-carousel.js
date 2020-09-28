@@ -31,19 +31,11 @@ function HeroCarousel() {
                       />
                     </div>
                   </div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <ul className="text-center">
-                      <h2 className="text-3xl text-white md:text-5xl font-display text-shadow">
-                        {slide.title}
-                      </h2>
-                      <Banner bannerColor="sky-blue" heading={slide.subTitle} />
-                      <Link
-                        to="/"
-                        className="inline-block px-4 mt-8 text-2xl font-bold tracking-wide uppercase transition-all duration-300 ease-in-out transform bg-white rounded-md md:text-4xl md:mt-20 text-slate font-display hover:text-white hover:bg-slate hover:scale-90"
-                      >
-                        Order now
-                      </Link>
-                    </ul>
+                  <div className="absolute inset-0 flex flex-col items-center justify-center">
+                    <h2 className="text-3xl text-white md:text-5xl font-display text-shadow">
+                      {slide.title}
+                    </h2>
+                    <Banner bannerColor="sky-blue" heading={slide.subTitle} />
                   </div>
                 </div>
               </li>
