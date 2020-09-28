@@ -1,6 +1,13 @@
 import React from 'react';
 
-import { Layout, SEO, Contact, InstagramWidget, About } from '../components';
+import {
+  Layout,
+  SEO,
+  About,
+  Contact,
+  InstagramWidget,
+  BusinessLogos,
+} from '../components';
 
 function AboutPage() {
   return (
@@ -29,6 +36,7 @@ function AboutPage() {
       </About>
       <Contact bgColorClass="bg-gold" />
       <InstagramWidget />
+      <BusinessLogos />
     </Layout>
   );
 }
