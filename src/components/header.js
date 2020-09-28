@@ -1,4 +1,4 @@
-import React, { useState, Fragment, useEffect } from 'react';
+import React, { useState, Fragment } from 'react';
 import { Link } from 'gatsby';
 
 import { useGraphQL, useSiteContext } from '../hooks';
@@ -14,10 +14,6 @@ function Header() {
   const { isHeaderActive } = useSiteContext();
 
   const [isOpen, setIsOpen] = useState(false);
-
-  useEffect(() => {
-    console.log(isHeaderActive);
-  }, [isHeaderActive]);
 
   return (
     <nav
