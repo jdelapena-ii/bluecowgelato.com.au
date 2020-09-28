@@ -22,7 +22,7 @@ module.exports = {
       '21/9': [21, 9], // or 21 / 9
     },
     backdropFilter: {
-      blur: `blur(${defaultTheme.spacing[1]})`,
+      blur: `blur(${defaultTheme.spacing[2]})`,
     },
     extend: {
       colors: {
@@ -36,16 +36,11 @@ module.exports = {
         sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
       },
       maxWidth: {
-        'screen-2xl': '48rem',
-        'screen-3xl': '56rem',
-        'screen-4xl': '64rem',
-        'screen-5xl': '72rem',
-        'screen-7xl': '80rem',
-        'screen-8xl': '88rem',
-        'screen-9xl': '96rem',
-        'screen-10xl': '104rem',
-        'screen-11xl': '112rem',
-        'screen-12xl': '120rem',
+        '8xl': '88rem',
+        '9xl': '96rem',
+        '10xl': '104rem',
+        '11xl': '112rem',
+        '12xl': '120rem',
       },
     },
   },
