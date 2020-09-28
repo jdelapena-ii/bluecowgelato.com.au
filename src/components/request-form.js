@@ -138,8 +138,8 @@ function RequestForm() {
                   'Lolly Forest',
                   'The Unicorn',
                   'The Mountain - add $2',
-                  'Fruit Frenzy - add 2$',
-                  'The Butterfly - add 2$',
+                  'Fruit Frenzy - add $2',
+                  'The Butterfly - add $2',
                 ]}
                 isFullWidth
                 register={register}
