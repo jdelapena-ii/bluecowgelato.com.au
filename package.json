@@ -57,6 +57,7 @@
     "react-hook-form": "^6.7.2",
     "react-intersection-observer": "^8.28.5",
     "react-spring": "^8.0.27",
+    "react-textfit": "^1.1.0",
     "tailwindcss": "^1.8.3",
     "tailwindcss-aspect-ratio": "^3.0.0",
     "tailwindcss-filters": "^3.0.0",

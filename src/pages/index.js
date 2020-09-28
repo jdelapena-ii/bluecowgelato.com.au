@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { Textfit } from 'react-textfit';
 
 import {
   Layout,
@@ -67,16 +68,31 @@ function CustomCakes() {
   const { cakeImage } = useGraphQL();
   return (
     <TextWithImage image={cakeImage.childImageSharp.fluid}>
-      <div className="text-center">
-        <h2 className="text-6xl font-bold md:text-7xl font-dots">Custom</h2>
-        <p className="text-4xl md:text-5xl font-dots">Gelato Cakes</p>
-        <p className="text-2xl font-semibold uppercase font-display">
-          Made to Order in Store
-        </p>
+      <div className="w-full max-w-xs mx-auto">
+        <h2
+          aria-label="Custom gelato cakes made to order instore"
+          className="flex flex-col font-black leading-none"
+        >
+          <div aria-hidden>
+            <Textfit mode="single">
+              <span className="font-dots">Custom</span>
+            </Textfit>
+            <div className="-mt-2">
+              <Textfit mode="single">
+                <span className="font-dots">Gelato Cakes</span>
+              </Textfit>
+              <Textfit mode="single">
+                <span className="uppercase font-display">
+                  Made to Order in-store
+                </span>
+              </Textfit>
+            </div>
+          </div>
+        </h2>
         <div className="flex justify-center mt-8">
           <Link
             to="/"
-            className="px-4 text-3xl font-bold tracking-wide uppercase transition-all duration-300 ease-in-out transform bg-white rounded-md md:text-4xl text-slate font-display hover:scale-90"
+            className="w-full px-4 text-3xl font-bold tracking-wide text-center uppercase transition-all duration-300 ease-in-out transform bg-white rounded-md md:text-4xl text-slate font-display hover:scale-90"
           >
             Enquire here
           </Link>
