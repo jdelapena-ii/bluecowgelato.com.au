@@ -84,14 +84,18 @@ function MobileMenu({ isOpen, setIsOpen }) {
               <div className="flex-1 h-0 mt-5 overflow-y-auto">
                 <nav className="px-2">
                   {mainNavigation.map((node) => (
-                    <Link
+                    <span
                       key={node.id}
-                      to={node.slug}
-                      className="flex items-center px-2 py-2 mt-1 text-base font-black leading-6 text-white uppercase transition duration-150 ease-in-out rounded-md font-display group hover:text-white hover:bg-sky-blue focus:shadow-none focus:text-white focus:bg-sky-blue"
-                      activeClassName="text-white bg-gold"
+                      className="block mt-1 overflow-hidden bg-white rounded-md"
                     >
-                      {node.label}
-                    </Link>
+                      <Link
+                        to={node.slug}
+                        className="flex items-center px-2 py-2 text-base font-black leading-6 text-white uppercase transition duration-150 ease-in-out bg-slate font-display group text-shadow hover:text-white hover:bg-sky-blue focus:shadow-none focus:text-white focus:bg-sky-blue"
+                        activeClassName="text-white bg-opacity-75"
+                      >
+                        {node.label}
+                      </Link>
+                    </span>
                   ))}
                 </nav>
               </div>
