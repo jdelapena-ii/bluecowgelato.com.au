@@ -6,7 +6,7 @@ import { useGraphQL } from '../hooks';
 const mainNavigation = [
   {
     id: nanoid(),
-    label: 'Order Now',
+    label: 'Order Cakes Now',
     slug: '/order-now/',
   },
   {
