@@ -90,8 +90,8 @@ function CustomCakes() {
         </h2>
         <div className="flex justify-center mt-8">
           <Link
-            to="/"
-            className="w-full px-4 text-3xl font-bold tracking-wide text-center uppercase transition-all duration-300 ease-in-out transform bg-white rounded-md md:text-4xl text-slate font-display hover:scale-90"
+            to="/gelato-cakes/"
+            className="w-full px-4 text-3xl font-black tracking-wide text-center uppercase transition-all duration-300 ease-in-out transform bg-white rounded-md md:text-4xl text-slate font-display hover:scale-90"
           >
             Enquire here
           </Link>
@@ -138,7 +138,7 @@ function GelatoCart() {
       reverse
     >
       <div className="flex flex-col items-center text-4xl text-center md:items-end md:text-right font-display md:text-5xl">
-        <h2 className="max-w-xs text-4xl font-bold md:text-6xl">
+        <h2 className="max-w-xs text-4xl font-black md:text-6xl">
           Blue Cow Gelato Cart
         </h2>
         <p className="mt-6">
