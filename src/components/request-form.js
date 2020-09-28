@@ -151,7 +151,7 @@ function RequestForm() {
                 register={register}
                 errors={errors}
               />
-              <div className="py-8 text-sm text-center break-words">
+              <div className="py-8 text-sm break-words">
                 <p>Vegan cakes allow for only one flavor.</p>
                 <p>
                   Any flavour outside of our standard range will incur a $7.50
