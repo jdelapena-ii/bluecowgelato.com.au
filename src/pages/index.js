@@ -143,11 +143,15 @@ function GelatoCart() {
         <h2 className="max-w-xs text-4xl font-bold md:text-6xl">
           Blue Cow Gelato Cart
         </h2>
-        <div className="mt-6">
-          <p className="text-2xl sm:text-3xl">Available for Hire</p>
-          <p className="text-2xl sm:text-3xl">Parties . Events</p>
-          <p className="text-2xl sm:text-3xl">Weddings . Markets</p>
-        </div>
+        <p className="mt-6">
+          <span className="block text-2xl sm:text-3xl">Available for Hire</span>
+          <span className="block text-2xl sm:text-3xl">
+            Parties &middot; Events
+          </span>
+          <span className="block text-2xl sm:text-3xl">
+            Weddings &middot; Markets
+          </span>
+        </p>
       </div>
     </TextWithImage>
   );
