@@ -41,7 +41,7 @@ function Header() {
                 <Link
                   to={node.slug}
                   partiallyActive={node.slug !== '/'}
-                  activeClassName="text-slate"
+                  activeClassName="underline"
                   className="inline-flex items-center px-1 text-sm font-normal leading-5 text-white uppercase whitespace-no-wrap transition duration-150 ease-in-out font-display text-shadow hover:opacity-75 focus:shadow-outline-gray focus:opacity-75"
                 >
                   {node.label}
