@@ -42,25 +42,24 @@ function ArtisanStyleGelato() {
           Artisan Style Gelato
         </h1>
       }
-      body={
-        <>
-          <p>
-            Locally owned and managed, this Artisan Gelateria makes its own
-            gelato by hand with the aid of its specialist Italian machine.
-          </p>
-          <p>
-            Using real ingredients, the flavours change constanly depending on
-            what's in season and what's popular. NO artificial colours, flavours
-            or preservatives are used. Vegan, gluten free and dairy free
-            flavours are also available.
-          </p>
-          <p>
-            So do your taste buds a favour and be blown away by the refreshing
-            real flavours!
-          </p>
-        </>
-      }
-    />
+    >
+      <div className="prose text-white">
+        <p>
+          Locally owned and managed, this Artisan Gelateria makes its own gelato
+          by hand with the aid of its specialist Italian machine.
+        </p>
+        <p>
+          Using real ingredients, the flavours change constanly depending on
+          what's in season and what's popular. NO artificial colours, flavours
+          or preservatives are used. Vegan, gluten free and dairy free flavours
+          are also available.
+        </p>
+        <p>
+          So do your taste buds a favour and be blown away by the refreshing
+          real flavours!
+        </p>
+      </div>
+    </HeadingWithText>
   );
 }
 
