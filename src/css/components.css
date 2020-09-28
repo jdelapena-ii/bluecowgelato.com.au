@@ -49,3 +49,9 @@ button:focus {
 [data-reach-tab][data-selected] {
   @apply border-b-0 border-gray-300 border-solid;
 }
+
+/* Override keen-slider user-select property */
+ul.keen-slider {
+  user-select: auto;
+}
+
