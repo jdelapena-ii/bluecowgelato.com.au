@@ -8,7 +8,7 @@ function About({ children, classNames }) {
   const { aboutHeroImage } = useGraphQL();
   return (
     <article
-      className={`relative  overflow-hidden ${
+      className={`relative overflow-hidden ${
         classNames || 'py-12 md:py-16 px-4 sm:px-6 lg:px-8'
       }`}
     >
