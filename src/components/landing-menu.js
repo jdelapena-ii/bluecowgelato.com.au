@@ -46,7 +46,7 @@ function LandingMenu() {
               <item.icon className="h-20 mx-auto md:h-24 lg:h-32" />
               <p
                 dangerouslySetInnerHTML={{ __html: item.name }}
-                className="py-6 uppercase md:font-bold font-display"
+                className="py-6 font-black uppercase font-display"
               />
             </div>
           ))}

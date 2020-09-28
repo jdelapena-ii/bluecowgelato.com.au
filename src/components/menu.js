@@ -47,7 +47,7 @@ function Menu() {
                 <div className="py-2 mx-auto border-b-4 border-dashed border-slate">
                   <h2
                     dangerouslySetInnerHTML={{ __html: product.name }}
-                    className="text-2xl font-bold uppercase md:text-3xl lg:text-4xl font-display"
+                    className="text-2xl font-black uppercase md:text-3xl lg:text-4xl font-display"
                   />
                 </div>
                 {product.categories.map((prod) => (
