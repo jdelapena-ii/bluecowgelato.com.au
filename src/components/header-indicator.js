@@ -4,7 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import { useSiteContext } from '../hooks';
 
 function HeaderIndicator() {
-  const { isHeaderActive, setIsHeaderActive } = useSiteContext();
+  const { setIsHeaderActive } = useSiteContext();
 
   const [ref, inView] = useInView({
     threshold: 0,
@@ -20,7 +20,7 @@ function HeaderIndicator() {
     }
   }, [inView, setIsHeaderActive]);
 
-  return <article ref={ref} />;
+  return <div aria-hidden ref={ref} />;
 }
 
 export { HeaderIndicator };
