@@ -1,12 +1,13 @@
 import React, { useState, Fragment } from 'react';
 import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
 
 import { useGraphQL, useSiteContext } from '../hooks';
 import { mainNavigation } from '../data';
 import { Logo } from './vectors';
 import { MobileMenu } from './mobile-menu';
 
-function Header() {
+function Header({ bgColorClass }) {
   const {
     site: { siteMetadata },
   } = useGraphQL();
@@ -18,7 +19,9 @@ function Header() {
   return (
     <nav
       className={`fixed inset-x-0 top-0 z-20 transition ease-in-out duration-300 ${
-        isHeaderActive ? 'bg-sky-blue shadow-md' : 'bg-transparent'
+        isHeaderActive
+          ? `${bgColorClass || 'bg-sky-blue'} shadow-md`
+          : 'bg-transparent'
       }`}
     >
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
@@ -123,5 +126,9 @@ function Header() {
     </nav>
   );
 }
+
+Header.propTypes = {
+  bgColorClass: PropTypes.string,
+};
 
 export { Header };

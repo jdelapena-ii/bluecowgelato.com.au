@@ -12,10 +12,10 @@ import { Header } from './header';
 import { HeaderIndicator } from './header-indicator';
 import { Footer } from './footer';
 
-function Layout({ children }) {
+function Layout({ children, headerBgColorClass }) {
   return (
     <div className="relative flex flex-col min-h-screen font-sans antialiased bg-sky-blue text-slate fill-available">
-      <Header />
+      <Header bgColorClass={headerBgColorClass} />
       <main id="main-content" className="flex-1">
         <HeaderIndicator />
         {children}
@@ -26,6 +26,7 @@ function Layout({ children }) {
 }
 
 Layout.propTypes = {
+  headerBgColorClass: PropTypes.string,
   children: PropTypes.node.isRequired,
 };
 
